@@ -34,3 +34,13 @@ public class ListMinimum {
     }
     
 }
+//Scanner in = new Scanner(System.in);
+//        int b = in.nextInt();
+//        int[] a = new int[b];
+//        for(int i = 0 ; i<b; i++){
+//            a[i]=in.nextInt();
+//        }
+//        Arrays.sort(a);
+//        for(int i = 0; i<b; i++){
+//            System.out.println(a[i]);
+//        } 

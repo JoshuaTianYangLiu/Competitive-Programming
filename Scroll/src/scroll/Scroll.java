@@ -3,29 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package shiftysum;
-
-import java.util.Scanner;
+package scroll;
 
 /**
  *
  * @author Joshua
  */
-public class ShiftySum {
+public class Scroll {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Scanner in = new Scanner(System.in);
-        int a = in.nextInt();
-        int b = in.nextInt();
-        int total = 0;
-        for(int i =0; i<b+1;i++){
-            total+=a*Math.pow(10, i);
-        }
-        System.out.println(total);
+        System.out.println("Who knows? Does it matter to you that much?");
     }
     
 }

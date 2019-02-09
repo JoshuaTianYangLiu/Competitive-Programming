@@ -3,15 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package shiftysum;
+package smilewithsimilies;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 /**
  *
  * @author Joshua
  */
-public class ShiftySum {
+public class SmileWithSimilies {
 
     /**
      * @param args the command line arguments
@@ -21,11 +24,19 @@ public class ShiftySum {
         Scanner in = new Scanner(System.in);
         int a = in.nextInt();
         int b = in.nextInt();
-        int total = 0;
-        for(int i =0; i<b+1;i++){
-            total+=a*Math.pow(10, i);
+        String[] c = new String[a];
+        String[] d = new String[b];
+        
+        for(int i=0; i<a; i++){
+            c[i]=in.next();
         }
-        System.out.println(total);
+        for(int i=0; i<b; i++){
+            d[i]=in.next();
+        }
+        for(int i =0;i<a; i++){
+            for(int j=0;j<b;j++){
+                System.out.println(c[i]+" as "+ d[j]);
+            }
+        }
     }
-    
 }

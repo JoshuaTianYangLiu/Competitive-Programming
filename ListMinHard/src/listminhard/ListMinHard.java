@@ -3,29 +3,37 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package shiftysum;
+package listminhard;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 /**
  *
  * @author Joshua
  */
-public class ShiftySum {
+public class ListMinHard {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        List<Integer> a = new ArrayList<Integer>();
         Scanner in = new Scanner(System.in);
-        int a = in.nextInt();
         int b = in.nextInt();
-        int total = 0;
-        for(int i =0; i<b+1;i++){
-            total+=a*Math.pow(10, i);
+        for(int i = 0 ; i<b; i++){
+            a.add(in.nextInt());
         }
-        System.out.println(total);
+        Collections.sort(a);
+        //Must faster ^
+        
+        for(int i = 0; i<b; i++){
+            System.out.println(a.get(i));
+        } 
     }
     
 }

@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package shiftysum;
+package termsofoffice;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  *
  * @author Joshua
  */
-public class ShiftySum {
+public class TermsOfOffice {
 
     /**
      * @param args the command line arguments
@@ -21,11 +21,9 @@ public class ShiftySum {
         Scanner in = new Scanner(System.in);
         int a = in.nextInt();
         int b = in.nextInt();
-        int total = 0;
-        for(int i =0; i<b+1;i++){
-            total+=a*Math.pow(10, i);
+        for(int i = a; i<=b; i+=60){
+            System.out.println("All positions change in year "+i);
         }
-        System.out.println(total);
     }
     
 }
