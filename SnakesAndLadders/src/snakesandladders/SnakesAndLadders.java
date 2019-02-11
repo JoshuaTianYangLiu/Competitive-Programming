@@ -21,9 +21,10 @@ public class SnakesAndLadders {
         Scanner in = new Scanner(System.in);
         int a = 1;
         int read=1;
-        while(read!=0 && a<100){
+        while(a<100){
             read = in.nextInt();
-            if(read!=0){
+            if(read==0)break;
+            if(read>=2 && read<=12 && a+read<=100){
                 a+=read;
                 if(a==54) a= 19;
                 else if(a==90) a= 48;
@@ -31,8 +32,9 @@ public class SnakesAndLadders {
                 else if(a==9) a= 34;
                 else if(a==40) a= 64;
                 else if(a== 67) a= 86; 
-                System.out.println("You are now on square "+a);
+                
             }
+            System.out.println("You are now on square "+a);
         }
         if(a>=100) System.out.println("You Win!");
         else System.out.println("You Quit!");
