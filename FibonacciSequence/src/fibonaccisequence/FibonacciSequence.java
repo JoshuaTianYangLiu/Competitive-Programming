@@ -23,6 +23,7 @@ public class FibonacciSequence {
         long x = 1;
         long y = 0;
         long v;
+        switch()
         for(int i=0;i<a;i++){
             v=x;
             x=x+y;
@@ -32,5 +33,7 @@ public class FibonacciSequence {
         System.out.println(y%1000000007);
         
     }
+    
+    
     
 }
