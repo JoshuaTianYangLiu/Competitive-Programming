@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package sandwich;
+package tudorbuyscheesecake;
 
 import java.util.*;
 import java.io.*;
@@ -15,7 +15,7 @@ import java.io.*;
  */
 
 
-public class Sandwich {
+public class TudorBuysCheesecake {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
@@ -24,26 +24,22 @@ public class Sandwich {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = readInt();
+        int letters[] = new int[26];
         String a = readLine();
-        Stack<Integer> top = new Stack<Integer>();
-        Queue<Integer> bot = new LinkedList<Integer>();
-        int num=1;
-        for(int i=0; i<size; i++){
-            if(a.charAt(i)=='1'){
-                top.push(num);
-            }else{
-                bot.add(num);
+        String b = readLine();
+        for(int i=0;i<a.length(); i++){
+            letters[a.charAt(i)-65]++;
+        }
+        for(int i=0; i<b.length(); i++){
+            if(letters[b.charAt(i)-65]>0){
+                letters[b.charAt(i)-65]--;
             }
-            num++;
         }
-        for(int i=top.size(); i>0; i--){
-            System.out.println(top.pop());
+        int total=0;
+        for(int i=0;i<26; i++){
+            total+=letters[i];
         }
-        for(int i=bot.size(); i>0; i--){
-            System.out.println(bot.remove());
-        }
-        
+        System.out.println(total);
     }
 
 

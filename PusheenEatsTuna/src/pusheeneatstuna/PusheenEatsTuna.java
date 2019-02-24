@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package sandwich;
+package pusheeneatstuna;
 
 import java.util.*;
 import java.io.*;
@@ -15,7 +15,7 @@ import java.io.*;
  */
 
 
-public class Sandwich {
+public class PusheenEatsTuna {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
@@ -25,28 +25,28 @@ public class Sandwich {
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
         int size = readInt();
-        String a = readLine();
-        Stack<Integer> top = new Stack<Integer>();
-        Queue<Integer> bot = new LinkedList<Integer>();
-        int num=1;
         for(int i=0; i<size; i++){
-            if(a.charAt(i)=='1'){
-                top.push(num);
+            int x = readInt();
+            int y = readInt();
+            int t = readInt();
+            if(intPossible(x,y,t)){
+                System.out.println("YES");
             }else{
-                bot.add(num);
+                System.out.println("NO");
             }
-            num++;
         }
-        for(int i=top.size(); i>0; i--){
-            System.out.println(top.pop());
-        }
-        for(int i=bot.size(); i>0; i--){
-            System.out.println(bot.remove());
-        }
-        
     }
 
-
+    static boolean intPossible(int x,int y, int t){
+        for(int j=0;j<(t/x)+1; j++){
+            for(int k=0;k<(t/y)+1; k++){
+                if(x*j+y*k==t){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());

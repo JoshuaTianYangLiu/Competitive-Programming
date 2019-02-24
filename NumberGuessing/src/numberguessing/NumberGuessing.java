@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package sandwich;
+package numberguessing;
 
 import java.util.*;
 import java.io.*;
@@ -15,7 +15,7 @@ import java.io.*;
  */
 
 
-public class Sandwich {
+public class NumberGuessing {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
@@ -25,25 +25,24 @@ public class Sandwich {
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
         int size = readInt();
-        String a = readLine();
-        Stack<Integer> top = new Stack<Integer>();
-        Queue<Integer> bot = new LinkedList<Integer>();
-        int num=1;
         for(int i=0; i<size; i++){
-            if(a.charAt(i)=='1'){
-                top.push(num);
-            }else{
-                bot.add(num);
+            int a = readInt();
+            int b = readInt();
+            int n = readInt();
+            for(int j=0; j<n; j++){
+                int c = Math.round((a+b)/2);
+                System.out.println(c);
+                String in = readLine();
+                if(in.equals("CORRECT")){
+                    break;
+                }else if(in.equals("TOO_SMALL")){
+                    b=c;
+                }else if(in.equals("TOO_BIG")){
+                    a=c;
+                }
             }
-            num++;
+            
         }
-        for(int i=top.size(); i>0; i--){
-            System.out.println(top.pop());
-        }
-        for(int i=bot.size(); i>0; i--){
-            System.out.println(bot.remove());
-        }
-        
     }
 
 
