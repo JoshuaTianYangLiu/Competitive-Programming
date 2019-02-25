@@ -21,8 +21,6 @@ public class PrimeFactorization {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
 
-    static List<Integer> base = new ArrayList<>();
-    static List<Integer> power = new ArrayList<>();
     /**
      * @param args the command line arguments
      */
@@ -31,60 +29,22 @@ public class PrimeFactorization {
         //Too slow
         int size = readInt();
         for(int c=0; c<size; c++){
-            int a = readInt();
-            int answer = 1;
-            int partAnswer = 0;
-            primeFactor(a);
-            String b ="";
-            for(int i = 0;i<base.size();i++){
-                for(int j = 0; j<power.get(i); j++){
-                    b+=base.get(i)+" ";
+            String a = "";
+            int b = readInt();
+            int i=2;
+            while(i<=Math.sqrt(b)||b==1){
+                if(b%i==0){
+                    a+=i+" ";
+                    b/=i;
+                }else{
+                    i++;
                 }
             }
-            b=b.trim();
-            System.out.println(b);
-        }
-    }
-    public static void primeFactor(int x){
-        int original = x;
-        int position = 0;
-        for(int i =2; i<(original/2)+1; i++){
-            do{
-                if(divisible(x,i)){
-                    if(listUsed(position)){
-                        power.set(position,power.get(position)+1);
-                        x=x/i;
-                    }else{
-                    base.add(position,i);
-                    power.add(position, 1);
-                    x=x/i;
-                    }
-                }
-            }while(divisible(x,i));
-            if (listUsed(position)){
-                position++;
-            } 
-        }
-        if (!listUsed(0)){
-            base.add(original);
-            power.add(1);
-        }
-    }
-    public static boolean listUsed(int position){
-        try{
-            base.get(position);
-            return true;
-        }catch(Exception e){
-            return false;
-        }
-    }
-    public static boolean divisible(int x,int i){
-        if(x!=0){
-            if(x % i==0){
-                return true;
+            if(b!=1){
+                a+=b+"";
             }
+            System.out.println(a.trim());
         }
-        return false;
     }
 
     static String next () throws IOException {
