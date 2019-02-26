@@ -3,41 +3,57 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fibonaccisequence;
 
-import java.io.*;
-import java.math.BigInteger;
+package greatfireofkores;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
- * @author liuti
+ * @author Joshua
  */
-public class FibonacciSequence {
+public class GreatFireOfKores {
 
     /**
      * @param args the command line arguments
      */
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
-    
-    public static void main(String[] args)throws IOException {
-        System.out.println(f(readLong()));
+
+    public static void main(String[] args) throws Exception {
+        // TODO code application logic here
+        int size = readInt();
+        int x[] = new int[size];
+        int y[] = new int[size];
         
-    }
-    static int f(long n){
-        if (n == 0) return 0; 
-        
-        if (n == 1 || n == 2) return 1;
-        
-        long k = n%2==0?n/2:(n+1)/2;
-        
-        if(n%2==0){
-            return ((2*f(k-1) + f(k))*f(k))%1000000007;
-        }else{
-            return (f(k)*f(k) + f(k-1)*f(k-1))%1000000007;
+        int total =0;
+        for(int i=0; i<size; i++){
+            x[i]= readInt();
+            y[i]= readInt();
         }
+        int find = readInt();
+        int x1[] = new int[find];
+        int y1[] = new int[find];
+        for(int i=0; i<find; i++){
+            x1[i]= readInt();
+            y1[i]= readInt();
+        }
+        int best=0;
+        for(int i=0; i<size;i++){
+            for(int j=0; j<find; j++){
+                if((x[i]-x1[j])*(x[i]-x1[j])+(y[i]-y1[j])*(y[i]-y1[j])<(x[i]-x1[best])*(x[i]-x1[best])+(y[i]-y1[best])*(y[i]-y1[best])){
+                    best = j;
+                }
+            }
+            total+= Math.abs(x[i]-x1[best]);
+            total+= Math.abs(y[i]-y1[best]);
+            best=0;
+        }
+        System.out.println(total);
+        
     }
+
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());
@@ -63,6 +79,4 @@ public class FibonacciSequence {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
-    
 }

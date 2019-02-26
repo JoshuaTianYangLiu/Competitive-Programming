@@ -3,41 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fibonaccisequence;
 
-import java.io.*;
-import java.math.BigInteger;
+package tiles;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
- * @author liuti
+ * @author Joshua
  */
-public class FibonacciSequence {
+public class Tiles {
 
     /**
      * @param args the command line arguments
      */
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
-    
-    public static void main(String[] args)throws IOException {
-        System.out.println(f(readLong()));
-        
+
+    public static void main(String[] args) throws Exception {
+        // TODO code application logic here
+        int x = readInt();
+        int y = readInt();
+        int size = readInt();
+        x = x/size;
+        y = y/size;
+        System.out.println(x*y);
     }
-    static int f(long n){
-        if (n == 0) return 0; 
-        
-        if (n == 1 || n == 2) return 1;
-        
-        long k = n%2==0?n/2:(n+1)/2;
-        
-        if(n%2==0){
-            return ((2*f(k-1) + f(k))*f(k))%1000000007;
-        }else{
-            return (f(k)*f(k) + f(k-1)*f(k-1))%1000000007;
-        }
-    }
+
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());
@@ -63,6 +56,4 @@ public class FibonacciSequence {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
-    
 }

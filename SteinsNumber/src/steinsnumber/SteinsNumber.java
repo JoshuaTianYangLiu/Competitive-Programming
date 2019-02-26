@@ -3,41 +3,42 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fibonaccisequence;
 
-import java.io.*;
-import java.math.BigInteger;
+package steinsnumber;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
- * @author liuti
+ * @author Joshua
  */
-public class FibonacciSequence {
+public class SteinsNumber {
 
     /**
      * @param args the command line arguments
      */
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
-    
-    public static void main(String[] args)throws IOException {
-        System.out.println(f(readLong()));
+
+    public static void main(String[] args) throws Exception {
+        // TODO code application logic here
+        int q = readInt();
         
-    }
-    static int f(long n){
-        if (n == 0) return 0; 
-        
-        if (n == 1 || n == 2) return 1;
-        
-        long k = n%2==0?n/2:(n+1)/2;
-        
-        if(n%2==0){
-            return ((2*f(k-1) + f(k))*f(k))%1000000007;
-        }else{
-            return (f(k)*f(k) + f(k-1)*f(k-1))%1000000007;
+        for(int i=0; i<q;i++){
+            int total = 0;
+            int a = readInt();
+            int b = readInt();
+            for(int j=a; j<=b; j++){
+                String c = Integer.toString( Integer.parseInt(Integer.toString(j), 10),3);
+                if(!c.contains("2")){
+                    total++;
+                }
+            }
+            System.out.println(total);
         }
     }
+
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());
@@ -63,6 +64,4 @@ public class FibonacciSequence {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
-    
 }

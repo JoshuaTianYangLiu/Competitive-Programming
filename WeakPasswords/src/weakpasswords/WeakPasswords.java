@@ -3,41 +3,42 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fibonaccisequence;
 
-import java.io.*;
-import java.math.BigInteger;
+package weakpasswords;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
- * @author liuti
+ * @author Joshua
  */
-public class FibonacciSequence {
+public class WeakPasswords {
 
     /**
      * @param args the command line arguments
      */
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
-    
-    public static void main(String[] args)throws IOException {
-        System.out.println(f(readLong()));
-        
-    }
-    static int f(long n){
-        if (n == 0) return 0; 
-        
-        if (n == 1 || n == 2) return 1;
-        
-        long k = n%2==0?n/2:(n+1)/2;
-        
-        if(n%2==0){
-            return ((2*f(k-1) + f(k))*f(k))%1000000007;
-        }else{
-            return (f(k)*f(k) + f(k-1)*f(k-1))%1000000007;
+
+    public static void main(String[] args) throws Exception {
+        // TODO code application logic here
+        for(int a = 0; a<5; a++){
+            int in = readInt();
+            for(int i = 65; i<91; i++){
+                for(int j = 65; j<91; j++){
+                    for(int k = 65; k<91; k++){
+                        for(int l = 65; l<91; l++){
+                            if((Integer.parseInt(Integer.toString(i)+Integer.toString(j)+Integer.toString(k)+Integer.toString(l)))%(i*11+j*101+k*1009+l*10007)==in){
+                                System.out.println(((char)i)+""+((char)j)+""+((char)k)+""+((char)l));
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
+
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());
@@ -63,6 +64,4 @@ public class FibonacciSequence {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
-    
 }

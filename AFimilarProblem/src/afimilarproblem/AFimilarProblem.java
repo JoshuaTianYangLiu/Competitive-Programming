@@ -3,41 +3,61 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fibonaccisequence;
 
+package afimilarproblem;
+
+import java.util.*;
 import java.io.*;
 import java.math.BigInteger;
-import java.util.*;
 
 /**
  *
  * @author liuti
  */
-public class FibonacciSequence {
+
+
+public class AFimilarProblem {
 
     /**
      * @param args the command line arguments
      */
+        // TODO code application logic here
+        //To be done
+        //Input is long
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
-    
-    public static void main(String[] args)throws IOException {
-        System.out.println(f(readLong()));
-        
-    }
-    static int f(long n){
-        if (n == 0) return 0; 
-        
-        if (n == 1 || n == 2) return 1;
-        
-        long k = n%2==0?n/2:(n+1)/2;
-        
-        if(n%2==0){
-            return ((2*f(k-1) + f(k))*f(k))%1000000007;
-        }else{
-            return (f(k)*f(k) + f(k-1)*f(k-1))%1000000007;
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws Exception{
+        // TODO code application logic here
+        long size = readLong();
+        long max = readLong();
+        List<Long> a= new ArrayList<Long>();
+        for(int i =0; i<size; i++){
+            a.add(readLong());
         }
+        long finnum=0;
+        long num =0;
+        int pos =0;
+        BigInteger total = new BigInteger("0");
+        for(int i=0; i<size; i++){
+            pos =i;
+            while(total.compareTo(BigInteger.valueOf(max))<0&&pos<size){
+                total.add(BigInteger.valueOf(a.get(pos)));
+                num++;
+                pos++;
+            }
+            total=BigInteger.ZERO;
+            if(num-1>finnum){
+                finnum=num-1;
+            }
+            num=0;
+        }
+        System.out.println(finnum);
     }
+
+
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());
@@ -63,6 +83,4 @@ public class FibonacciSequence {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
-    
 }

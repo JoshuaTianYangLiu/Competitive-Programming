@@ -3,40 +3,48 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fibonaccisequence;
 
-import java.io.*;
-import java.math.BigInteger;
+package mockingspongebob;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
- * @author liuti
+ * @author Joshua
  */
-public class FibonacciSequence {
+public class MockingSpongebob {
 
     /**
      * @param args the command line arguments
      */
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
-    
-    public static void main(String[] args)throws IOException {
-        System.out.println(f(readLong()));
-        
-    }
-    static int f(long n){
-        if (n == 0) return 0; 
-        
-        if (n == 1 || n == 2) return 1;
-        
-        long k = n%2==0?n/2:(n+1)/2;
-        
-        if(n%2==0){
-            return ((2*f(k-1) + f(k))*f(k))%1000000007;
-        }else{
-            return (f(k)*f(k) + f(k-1)*f(k-1))%1000000007;
+
+    public static void main(String[] args) throws Exception {
+        // TODO code application logic here
+        int a =readInt();
+        for(int i=0; i<a; i++){
+            mock(readLine());
         }
+    }
+    static void mock(String a){
+        String b="";
+        a=a.toLowerCase();
+        boolean upCase = false;
+        for(int i=0; i<a.length(); i++){
+            if(a.charAt(i)<123&&a.charAt(i)>96){
+                if(upCase){
+                    b+=(char)(a.charAt(i)-32);
+                }else{
+                    b+=a.charAt(i);
+                }
+                upCase=!upCase;
+            }else{
+                b+=a.charAt(i);
+            }
+        }
+        System.out.println(b);
     }
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
@@ -63,6 +71,4 @@ public class FibonacciSequence {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
-    
 }

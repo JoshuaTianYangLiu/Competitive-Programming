@@ -3,41 +3,48 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fibonaccisequence;
 
-import java.io.*;
-import java.math.BigInteger;
+package ragaman;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
- * @author liuti
+ * @author Joshua
  */
-public class FibonacciSequence {
+public class Ragaman {
 
     /**
      * @param args the command line arguments
      */
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
-    
-    public static void main(String[] args)throws IOException {
-        System.out.println(f(readLong()));
-        
-    }
-    static int f(long n){
-        if (n == 0) return 0; 
-        
-        if (n == 1 || n == 2) return 1;
-        
-        long k = n%2==0?n/2:(n+1)/2;
-        
-        if(n%2==0){
-            return ((2*f(k-1) + f(k))*f(k))%1000000007;
-        }else{
-            return (f(k)*f(k) + f(k-1)*f(k-1))%1000000007;
+
+    public static void main(String[] args) throws Exception {
+        // TODO code application logic here
+        String a = next();
+        String b = next();
+        int c[] = new int[26];
+        int d[] = new int[26];
+        int num =0;
+        for(int i=0; i<a.length(); i++){
+            if(b.substring(i, i+1).equals("*")){
+                num++;
+            }else{
+                d[(int)b.charAt(i) - 97]++;
+            }
+            c[(int)a.charAt(i) - 97]++;
         }
+        for(int i=0; i<26; i++){
+            if(c[i]<d[i]){
+                System.out.println("N");
+                System.exit(0);
+            }
+        }
+        System.out.println("A");
     }
+
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());
@@ -63,6 +70,4 @@ public class FibonacciSequence {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
-    
 }
