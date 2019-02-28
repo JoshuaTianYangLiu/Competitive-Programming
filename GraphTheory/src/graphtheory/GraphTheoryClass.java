@@ -36,6 +36,7 @@ public class GraphTheoryClass {
     }
     
     int longestBranch(int startNode){
+        //Something is wrong with this algorithm but im not sure what it is
         Queue<Integer> q = new LinkedList<Integer>();
         boolean visited[] = new boolean[nodes.length];
         int distance[] = new int[nodes.length];
@@ -63,6 +64,22 @@ public class GraphTheoryClass {
         return max;
     }
     int dijkstra(int startNode, int endNode){
-        
+        Queue<Integer> q = new LinkedList<Integer>();
+        boolean visited[] = new boolean[nodes.length];
+        int distance[] = new int[nodes.length];
+        q.add(startNode);
+        while(!q.isEmpty()){
+            int nodePos = q.remove();
+            for(int i=0; i<nodes[nodePos].size(); i++){
+                //update the node distance
+                if(nodeDistance[nodePos].get(i)+distance[nodePos]>distance[nodes[nodePos].get(i)]){
+                    distance[nodes[nodePos].get(i)]=nodeDistance[nodePos].get(i)+distance[nodePos];
+                }
+            }
+            //add node positions to queue from least to most based on distance
+            //Not the most efficient in terms of sorting
+            //IDK how to do this... rip
+        }
+        return distance[endNode];
     }
 }
