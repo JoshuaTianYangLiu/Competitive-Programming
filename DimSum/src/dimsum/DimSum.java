@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package prettyaverageprime;
+package dimsum;
 
 import java.util.*;
 import java.io.*;
@@ -15,7 +15,7 @@ import java.io.*;
  */
 
 
-public class PrettyAveragePrime {
+public class DimSum {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
@@ -24,26 +24,15 @@ public class PrettyAveragePrime {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int cases = readInt();
-        for(int i=0;i<cases;i++){
-            int sum = 2*readInt();
-            for(int j=2;j<sum; j++){
-                if(isPrime(j)&&isPrime(sum-j)){
-                    System.out.println(Integer.toString(j)+" "+Integer.toString(sum-j));
-                    break;
-                }
-            }
+        int size = readInt();
+        int total = 0;
+        for(int i=0; i<size; i++){
+            total+=readInt();
         }
+        System.out.println(total);
     }
 
-    static boolean isPrime(int in){
-        for(int i=2; i<=Math.sqrt(in); i++){
-            if(in%i==0){
-                return false;
-            }
-        }
-        return true;
-    }
+
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());
