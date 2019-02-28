@@ -4,17 +4,16 @@
  * and open the template in the editor.
  */
 
-package mydrinkismadeofcubes;
+package graphtheory;
 
 import java.util.*;
 import java.io.*;
-
 
 /**
  *
  * @author Joshua
  */
-public class MyDrinkIsMadeOfCubes {
+public class GraphTheory {
 
     /**
      * @param args the command line arguments
@@ -24,22 +23,12 @@ public class MyDrinkIsMadeOfCubes {
 
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
-        for(int i=0; i<5; i++){
-            int vol = readInt();
-            int tempVol = vol;
-            int coord[] = new int[3];
-            for(int k=0; k<2; k++){
-                for(int j=(int)Math.round(Math.cbrt(vol)); j<vol+1; j++){
-                    if(tempVol%j==0){
-                        coord[k]=j;
-                        tempVol/=j;
-                        break;
-                    }
-                }
-            }
-            coord[2]=tempVol;
-            System.out.println(2*(coord[0]*coord[1]+coord[0]*coord[2]+coord[2]*coord[1]));
+        GraphTheoryClass a = new GraphTheoryClass(readInt());
+        int branches = readInt();
+        for(int i=0; i<branches; i++){
+            a.addBranch(readInt(), readInt(), 1, false);
         }
+        System.out.println(a.longestBranch(3));
     }
 
     static String next () throws IOException {
