@@ -62,5 +62,7 @@ public class GraphTheoryClass {
         }
         return max;
     }
-    
+    int dijkstra(int startNode, int endNode){
+        
+    }
 }

@@ -28,7 +28,7 @@ public class GraphTheory {
         for(int i=0; i<branches; i++){
             a.addBranch(readInt(), readInt(), 1, false);
         }
-        System.out.println(a.longestBranch(3));
+        System.out.println(a.longestBranch(1));
     }
 
     static String next () throws IOException {
