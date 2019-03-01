@@ -22,20 +22,12 @@ public class FibonacciSequence {
     static StringTokenizer st;
     
     public static void main(String[] args)throws IOException {
-        System.out.println(f(readLong()));
-        
-    }
-    static int f(long n){
-        if (n == 0) return 0; 
-        
-        if (n == 1 || n == 2) return 1;
-        
-        long k = n%2==0?n/2:(n+1)/2;
-        
-        if(n%2==0){
-            return ((2*f(k-1) + f(k))*f(k))%1000000007;
+        double phi = (Math.sqrt(5)+1)/2;
+        int a = readInt();
+        if(a<3){
+            System.out.println(1);
         }else{
-            return (f(k)*f(k) + f(k-1)*f(k-1))%1000000007;
+            System.out.println(Math.round(Math.pow(phi,a)-Math.pow(-phi, a)))
         }
     }
     static String next () throws IOException {
