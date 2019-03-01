@@ -3,35 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fibonaccisequence;
 
-import java.io.*;
-import java.math.BigDecimal;
-import java.math.MathContext;
-import java.math.RoundingMode;
+package santasflight;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
- * @author liuti
+ * @author Joshua
  */
-public class FibonacciSequence {
 
+
+public class SantasFlight {
+
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static StringTokenizer st;
     /**
      * @param args the command line arguments
      */
-    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    static StringTokenizer st;
-    
-    public static void main(String[] args)throws IOException {
-        double phi = (Math.sqrt(5)+1)/2;
-        long a = readLong();
-        if(a<3){
-            System.out.println(1);
-        }else{
-            System.out.println(Math.round(((Math.pow(phi,a)-Math.pow(1-phi,a))/Math.sqrt(5)))%1000000007);
-        }
+    public static void main(String[] args) throws Exception{
+        // TODO code application logic here
     }
+    double slope
+
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());
@@ -57,6 +52,4 @@ public class FibonacciSequence {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
-    
 }
