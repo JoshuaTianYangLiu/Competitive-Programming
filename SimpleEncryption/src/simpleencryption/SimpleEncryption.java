@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package listminimum;
 
-import java.io.*;
+package simpleencryption;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author Joshua
  */
-public class ListMinimum {
 
-    /**
-     * @param args the command line arguments
-     */
+
+public class SimpleEncryption {
+
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -24,15 +24,14 @@ public class ListMinimum {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = readInt();
-        List<Integer> a = new ArrayList<Integer>();
-        for(int i=0; i<size; i++){
-            a.add(readInt());
+        String key = readLine();
+        String input = readLine();
+        String out = "";
+        input=input.replaceAll("\\W", "");
+        for(int i=0; i<input.length(); i++){
+            out+=(char)((input.charAt(i)-65+key.charAt(i%key.length())-65)%26+65)+"";
         }
-        Collections.sort(a);
-        for(int i=0; i<size; i++){
-            System.out.println(a.get(i));
-        }
+        System.out.println(out);
     }
 
 
@@ -61,5 +60,4 @@ public class ListMinimum {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
 }

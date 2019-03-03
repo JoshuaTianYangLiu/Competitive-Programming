@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package listminimum;
 
-import java.io.*;
+package monogramcreator;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author Joshua
  */
-public class ListMinimum {
 
-    /**
-     * @param args the command line arguments
-     */
+
+public class MonogramCreator {
+
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -24,15 +24,8 @@ public class ListMinimum {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = readInt();
-        List<Integer> a = new ArrayList<Integer>();
-        for(int i=0; i<size; i++){
-            a.add(readInt());
-        }
-        Collections.sort(a);
-        for(int i=0; i<size; i++){
-            System.out.println(a.get(i));
-        }
+        NewJFrame j = new NewJFrame();
+        
     }
 
 
@@ -61,5 +54,4 @@ public class ListMinimum {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
 }

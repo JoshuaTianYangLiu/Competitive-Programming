@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package listminimum;
 
-import java.io.*;
+package codecopiers;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author Joshua
  */
-public class ListMinimum {
 
-    /**
-     * @param args the command line arguments
-     */
+
+public class CodeCopiers {
+
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -25,14 +25,17 @@ public class ListMinimum {
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
         int size = readInt();
-        List<Integer> a = new ArrayList<Integer>();
+        int copied[] = new int[size+1];
+        int total = size;
         for(int i=0; i<size; i++){
-            a.add(readInt());
+            int person = readInt();
+            if(person!=0){
+                if(copied[person]++<1){
+                    total--;
+                }
+            }
         }
-        Collections.sort(a);
-        for(int i=0; i<size; i++){
-            System.out.println(a.get(i));
-        }
+        System.out.println(total);
     }
 
 
@@ -61,5 +64,4 @@ public class ListMinimum {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
 }

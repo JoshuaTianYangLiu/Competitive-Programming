@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package listminimum;
 
-import java.io.*;
+package mousemove;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author Joshua
  */
-public class ListMinimum {
 
-    /**
-     * @param args the command line arguments
-     */
+
+public class MouseMove {
+
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -24,14 +24,22 @@ public class ListMinimum {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = readInt();
-        List<Integer> a = new ArrayList<Integer>();
-        for(int i=0; i<size; i++){
-            a.add(readInt());
-        }
-        Collections.sort(a);
-        for(int i=0; i<size; i++){
-            System.out.println(a.get(i));
+        int xMax =readInt();
+        int yMax = readInt();
+        int x = 0;
+        int y = 0;
+        int xMove = readInt();
+        int yMove = readInt();
+        while(xMove!=0||yMove!=0){
+            x+=xMove;
+            y+=yMove;
+            if(x>xMax)x=xMax;
+            else if(x<0)x=0;
+            if(y>yMax)y=yMax;
+            else if(y<0)y=0;
+            xMove=readInt();
+            yMove=readInt();
+            System.out.println(x+" "+y);
         }
     }
 
@@ -61,5 +69,4 @@ public class ListMinimum {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
 }

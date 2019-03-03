@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package listminimum;
 
-import java.io.*;
+package numberoffactors;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author Joshua
  */
-public class ListMinimum {
 
-    /**
-     * @param args the command line arguments
-     */
+
+public class NumberOfFactors {
+
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -24,14 +24,25 @@ public class ListMinimum {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = readInt();
-        List<Integer> a = new ArrayList<Integer>();
-        for(int i=0; i<size; i++){
-            a.add(readInt());
-        }
-        Collections.sort(a);
-        for(int i=0; i<size; i++){
-            System.out.println(a.get(i));
+        for(int c=0; c<5; c++){
+            int total =0;
+            int b = readInt();
+            int d = b;
+            int i=2;
+            while(i<=Math.sqrt(b)||b==1){
+                if(b%i==0){
+                    total++;
+                    b/=i;
+                }else{
+                    i++;
+                }
+            }
+            if(b==d){
+                total=0;
+            }else if(b!=1){
+                total++;
+            }
+            System.out.println(total);
         }
     }
 
@@ -61,5 +72,4 @@ public class ListMinimum {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
 }

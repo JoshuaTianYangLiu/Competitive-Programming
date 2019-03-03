@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package listminimum;
 
-import java.io.*;
+package diamonds;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author Joshua
  */
-public class ListMinimum {
 
-    /**
-     * @param args the command line arguments
-     */
+
+public class Diamonds {
+
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -25,13 +25,36 @@ public class ListMinimum {
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
         int size = readInt();
-        List<Integer> a = new ArrayList<Integer>();
+        String out[][] = new String[size][size];
         for(int i=0; i<size; i++){
-            a.add(readInt());
+            for(int j=0; j<size; j++){
+                out[i][j]="*";
+            }
         }
-        Collections.sort(a);
+        int begin = (size+1)/2-1;
+        int end = (size+1)/2-1;
+        for(int i=1; i<(size+1)/2; i++){
+            for(int j=begin; j<end+1; j++){
+                out[i][j]=" ";
+            }
+            begin--;
+            end++;
+        }
+        begin+=2;
+        end-=2;
+        for(int i=(size+1)/2; i<size-1; i++){
+            for(int j=begin; j<end+1; j++){
+                out[i][j]=" ";
+            }
+            begin++;
+            end--;
+        }
         for(int i=0; i<size; i++){
-            System.out.println(a.get(i));
+            String a = "";
+            for(int j=0; j<size; j++){
+                a+=out[i][j];
+            }
+            System.out.println(a);
         }
     }
 
@@ -61,5 +84,4 @@ public class ListMinimum {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
 }

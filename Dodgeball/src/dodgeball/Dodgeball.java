@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package listminimum;
 
-import java.io.*;
+package dodgeball;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author Joshua
  */
-public class ListMinimum {
 
-    /**
-     * @param args the command line arguments
-     */
+
+public class Dodgeball {
+
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -25,14 +25,23 @@ public class ListMinimum {
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
         int size = readInt();
-        List<Integer> a = new ArrayList<Integer>();
+        String names="";
         for(int i=0; i<size; i++){
-            a.add(readInt());
+            names+=Character.toLowerCase(readCharacter())+"";
         }
-        Collections.sort(a);
-        for(int i=0; i<size; i++){
-            System.out.println(a.get(i));
+        int j=0;
+        int total = 0;
+        for(int i=0; i<size;){
+            if(i<size&&names.charAt(j)==names.charAt(i)){
+                i++;
+                total++;
+            }else{
+                j++;
+                total++;
+            }
+            
         }
+        System.out.println(total-1);
     }
 
 
@@ -61,5 +70,4 @@ public class ListMinimum {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
-    
 }

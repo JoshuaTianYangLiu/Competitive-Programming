@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package listminimum;
 
-import java.io.*;
+package hackathon;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author Joshua
  */
-public class ListMinimum {
 
-    /**
-     * @param args the command line arguments
-     */
+
+public class Hackathon {
+
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -25,13 +25,23 @@ public class ListMinimum {
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
         int size = readInt();
-        List<Integer> a = new ArrayList<Integer>();
+        List<timeWowFactor> a = new ArrayList<timeWowFactor>();
         for(int i=0; i<size; i++){
-            a.add(readInt());
+            a.add(new timeWowFactor(readInt(),readInt()));
         }
         Collections.sort(a);
-        for(int i=0; i<size; i++){
-            System.out.println(a.get(i));
+        int q = readInt();
+        int value=0;
+        for(int i=0; i<q; i++){
+            value = readInt();
+            int pos = Collections.binarySearch(a, new timeWowFactor(value,-1));
+            if(pos<0){
+                if (pos==-1) pos=0;
+                else pos=Math.abs(pos)-2;
+             
+            }
+            
+            System.out.println(a.get(pos).factor);
         }
     }
 
@@ -61,5 +71,6 @@ public class ListMinimum {
     static String readLine() throws IOException {
         return br.readLine().trim();
     }
+    
     
 }
