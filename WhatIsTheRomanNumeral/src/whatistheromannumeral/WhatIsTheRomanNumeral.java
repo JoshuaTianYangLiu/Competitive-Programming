@@ -4,18 +4,18 @@
  * and open the template in the editor.
  */
 
-package nextsemiprime;
+package whatistheromannumeral;
 
 import java.util.*;
 import java.io.*;
 
 /**
  *
- * @author liuti
+ * @author Joshua
  */
 
 
-public class NextSemiPrime {
+public class WhatIsTheRomanNumeral {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
@@ -24,35 +24,39 @@ public class NextSemiPrime {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = readInt();
-        for(int i=0; i<size; i++){
-            int a = readInt()+1;
-            semiprime(a);
-//            while(!semiPrime(a)){
-//                a++;
-//            }
-//            System.out.println(a);
+        for(int i =0; i<5; i++){
+            System.out.println(romanToNum(readLine()));
         }
     }
-    static int checkSemiprime(int num){ 
-        int cnt = 0; 
-      
-        for (int i = 2; cnt < 2 && i * i <= num; ++i){
-                       
-            while (num % i == 0){ 
-                num /= i; 
-                ++cnt; 
-                } 
-        }
-        if (num > 1) ++cnt; 
-        return cnt == 2 ? 1 : 0; 
-    }
-    static void semiprime(int n){ 
-        if (checkSemiprime(n) != 0) System.out.printf("True\n"); 
-        else System.out.printf("False\n"); 
+    static int value(char r){ 
+        if (r == 'I') 
+            return 1; 
+        if (r == 'V') 
+            return 5; 
+        if (r == 'X') 
+            return 10; 
+        if (r == 'L') 
+            return 50; 
+        if (r == 'C') 
+            return 100; 
+        if (r == 'D') 
+            return 500; 
+        if (r == 'M') 
+            return 1000; 
+        return -1; 
     } 
-      
-
+    static int romanToNum(String x){
+        int t =0;
+        for(int i=0; i<x.length()-1; i++){
+            if(value(x.charAt(i))<value(x.charAt(i+1))){
+                t-=value(x.charAt(i));
+            }else{
+                t+=value(x.charAt(i));
+            }
+        }
+        t+=value(x.charAt(x.length()-1));
+        return t;
+    }
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());

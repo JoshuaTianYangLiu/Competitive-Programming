@@ -4,18 +4,18 @@
  * and open the template in the editor.
  */
 
-package nextsemiprime;
+package aplusbhard;
 
 import java.util.*;
 import java.io.*;
 
 /**
  *
- * @author liuti
+ * @author Joshua
  */
 
 
-public class NextSemiPrime {
+public class APlusBHard {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
@@ -26,32 +26,10 @@ public class NextSemiPrime {
         // TODO code application logic here
         int size = readInt();
         for(int i=0; i<size; i++){
-            int a = readInt()+1;
-            semiprime(a);
-//            while(!semiPrime(a)){
-//                a++;
-//            }
-//            System.out.println(a);
+            
         }
     }
-    static int checkSemiprime(int num){ 
-        int cnt = 0; 
-      
-        for (int i = 2; cnt < 2 && i * i <= num; ++i){
-                       
-            while (num % i == 0){ 
-                num /= i; 
-                ++cnt; 
-                } 
-        }
-        if (num > 1) ++cnt; 
-        return cnt == 2 ? 1 : 0; 
-    }
-    static void semiprime(int n){ 
-        if (checkSemiprime(n) != 0) System.out.printf("True\n"); 
-        else System.out.printf("False\n"); 
-    } 
-      
+
 
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())

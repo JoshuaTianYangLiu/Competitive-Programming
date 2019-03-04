@@ -4,18 +4,18 @@
  * and open the template in the editor.
  */
 
-package nextsemiprime;
+package bubblesort;
 
 import java.util.*;
 import java.io.*;
 
 /**
  *
- * @author liuti
+ * @author Joshua
  */
 
 
-public class NextSemiPrime {
+public class BubbleSort {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
@@ -24,34 +24,33 @@ public class NextSemiPrime {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = readInt();
+        int size =readInt();
+        int a[] = new int[size];
         for(int i=0; i<size; i++){
-            int a = readInt()+1;
-            semiprime(a);
-//            while(!semiPrime(a)){
-//                a++;
-//            }
-//            System.out.println(a);
+            a[i]=readInt();
+        }
+        String b = "";
+        for(int i=0; i<size; i++){
+            b+=a[i]+" ";
+        }
+        System.out.println(b.trim());
+        int temp =0;
+        for(int i=0; i<size-1; i++){
+            for(int j=0; j<size-1; j++){
+                if(a[j]>a[j+1]){
+                    temp = a[j+1];
+                    a[j+1]=a[j];
+                    a[j]=temp;
+                    b="";
+                    for(int k=0; k<size; k++){
+                        b+=a[k]+" ";
+                    }
+                    System.out.println(b.trim());
+                }
+            }
         }
     }
-    static int checkSemiprime(int num){ 
-        int cnt = 0; 
-      
-        for (int i = 2; cnt < 2 && i * i <= num; ++i){
-                       
-            while (num % i == 0){ 
-                num /= i; 
-                ++cnt; 
-                } 
-        }
-        if (num > 1) ++cnt; 
-        return cnt == 2 ? 1 : 0; 
-    }
-    static void semiprime(int n){ 
-        if (checkSemiprime(n) != 0) System.out.printf("True\n"); 
-        else System.out.printf("False\n"); 
-    } 
-      
+
 
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())

@@ -4,18 +4,18 @@
  * and open the template in the editor.
  */
 
-package nextsemiprime;
+package crayolalightsaber;
 
 import java.util.*;
 import java.io.*;
 
 /**
  *
- * @author liuti
+ * @author Joshua
  */
 
 
-public class NextSemiPrime {
+public class CrayolaLightsaber {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
@@ -25,33 +25,48 @@ public class NextSemiPrime {
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
         int size = readInt();
+        int colour[] = new int[6];
         for(int i=0; i<size; i++){
-            int a = readInt()+1;
-            semiprime(a);
-//            while(!semiPrime(a)){
-//                a++;
-//            }
-//            System.out.println(a);
+            String a = next();
+            if(a.equals("red")){
+                colour[0]++;
+            }else if(a.equals("orange")){
+                colour[1]++;
+            }else if(a.equals("yellow")){
+                colour[2]++;
+            }else if(a.equals("green")){
+                colour[3]++;
+            }else if(a.equals("blue")){
+                colour[4]++;
+            }else if(a.equals("black")){
+                colour[5]++;
+            }
         }
-    }
-    static int checkSemiprime(int num){ 
-        int cnt = 0; 
-      
-        for (int i = 2; cnt < 2 && i * i <= num; ++i){
-                       
-            while (num % i == 0){ 
-                num /= i; 
-                ++cnt; 
-                } 
+        int total=1;
+        int c = 5;
+        for(int i=0; i<6; i++){
+            if(colour[i]>colour[c]){
+                c=i;
+            }
         }
-        if (num > 1) ++cnt; 
-        return cnt == 2 ? 1 : 0; 
+        colour[c]--;
+        out:
+        for(;;){
+            for(int i=0; i<6; i++){
+                if(i!=c&&colour[i]>0){
+                    colour[i]--;
+                    total++;
+                    c=i;
+                    break;
+                }
+                if(i==5){
+                    break out;
+                }
+            }
+        }
+        System.out.println(total);
     }
-    static void semiprime(int n){ 
-        if (checkSemiprime(n) != 0) System.out.printf("True\n"); 
-        else System.out.printf("False\n"); 
-    } 
-      
+
 
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
