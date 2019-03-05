@@ -3,16 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package joshua_liu_test1;
 
-import java.io.*;
+package rockpaperscissors;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author Joshua
  */
-public class QuestionsA {
+
+
+public class RockPaperScissors {
+
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -20,27 +24,36 @@ public class QuestionsA {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        for(int j=0; j<10; j++){
-            double wT = readDouble()/100;
-            double wA = readDouble()/100;
-            double wP = readDouble()/100;
-            double wQ = readDouble()/100;
-            int size = readInt();
-            int passed =0;
-            for(int i=0; i<size; i++){
-                int t = readInt();
-                int a = readInt();
-                int p = readInt();
-                int q = readInt();
-                if(wT*t+wA*a+wP*p+wQ*q>=50.0){
-                    passed++;
-                }
+        int a = readInt();
+        char player[][] = new char[2][a];
+        for(int i=0; i<2; i++){
+            for(int j=0; j<a; j++){
+                String b = next();
+                player[i][j] = b.charAt(0);
             }
-            System.out.println(passed);
         }
+        int p1 =0;
+        int p2 =0;
+        for(int i=0; i<a; i++){
+            if(p1Win(player[0][i],player[1][i])){
+                p1++;
+            }else if(player[0][i]!=player[1][i]){
+                p2++;
+            }
+        }
+        System.out.println(p1+" "+p2);
     }
 
-
+    static boolean p1Win(char p1, char p2){
+        if(p1=='r'&&p2=='s'){
+            return true;
+        }else if(p1=='p'&&p2=='r'){
+            return true;
+        }else if(p1=='s'&&p2=='p'){
+            return true;
+        }
+        return false;
+    }
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());

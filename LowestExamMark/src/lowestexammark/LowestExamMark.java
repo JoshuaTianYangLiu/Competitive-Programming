@@ -3,16 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package joshua_liu_test1;
 
-import java.io.*;
+package lowestexammark;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author Joshua
  */
-public class QuestionsA {
+
+
+public class LowestExamMark {
+
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -20,27 +24,26 @@ public class QuestionsA {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        for(int j=0; j<10; j++){
-            double wT = readDouble()/100;
-            double wA = readDouble()/100;
-            double wP = readDouble()/100;
-            double wQ = readDouble()/100;
-            int size = readInt();
-            int passed =0;
-            for(int i=0; i<size; i++){
-                int t = readInt();
-                int a = readInt();
-                int p = readInt();
-                int q = readInt();
-                if(wT*t+wA*a+wP*p+wQ*q>=50.0){
-                    passed++;
-                }
-            }
-            System.out.println(passed);
+        int curMark = readInt();
+        int finalMark = readInt();
+        int weight = readInt();
+        double examW = weight/100.0;
+        double markW = (100.0-weight)/100.0;
+        if(passable(curMark,finalMark,examW,markW)==-1){
+            System.out.println("DROP THE COURSE");
+        }else{
+            System.out.println(passable(curMark,finalMark,examW,markW));
         }
     }
 
-
+    static int passable(int curMark, int finalMark, double examW,double markW){
+        for(int i=0; i<=100; i++){
+            if(Math.round(i*examW +markW*curMark)>=finalMark){
+                return i;
+            }
+        }
+        return -1;
+    }
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());

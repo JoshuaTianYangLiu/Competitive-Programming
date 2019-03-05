@@ -3,16 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package joshua_liu_test1;
 
-import java.io.*;
+package paperholepunching;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author Joshua
  */
-public class QuestionsA {
+
+
+public class PaperHolePunching {
+
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -20,23 +24,26 @@ public class QuestionsA {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        for(int j=0; j<10; j++){
-            double wT = readDouble()/100;
-            double wA = readDouble()/100;
-            double wP = readDouble()/100;
-            double wQ = readDouble()/100;
-            int size = readInt();
-            int passed =0;
-            for(int i=0; i<size; i++){
-                int t = readInt();
-                int a = readInt();
-                int p = readInt();
-                int q = readInt();
-                if(wT*t+wA*a+wP*p+wQ*q>=50.0){
-                    passed++;
+        boolean letters[] = new boolean[6];
+        String temp = readLine();
+        int b = 0;
+        for(int i=1; i<temp.length(); i++){
+            letters[temp.charAt(i)-65]=true;
+        }
+        int size = readInt();
+        for(int i=0; i<size; i++){
+            String a =readLine();
+            b=0;
+            for(int j=1; j<a.length(); j++){
+                if(letters[a.charAt(j)-65]){
+                    b++;
                 }
             }
-            System.out.println(passed);
+            if(b==temp.length()-1){
+                System.out.println("yes");
+            }else{
+                System.out.println("no");
+            }
         }
     }
 

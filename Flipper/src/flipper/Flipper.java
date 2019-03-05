@@ -3,16 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package joshua_liu_test1;
 
-import java.io.*;
+package flipper;
+
 import java.util.*;
+import java.io.*;
 
 /**
  *
  * @author Joshua
  */
-public class QuestionsA {
+
+
+public class Flipper {
+
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -20,24 +24,39 @@ public class QuestionsA {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        for(int j=0; j<10; j++){
-            double wT = readDouble()/100;
-            double wA = readDouble()/100;
-            double wP = readDouble()/100;
-            double wQ = readDouble()/100;
-            int size = readInt();
-            int passed =0;
-            for(int i=0; i<size; i++){
-                int t = readInt();
-                int a = readInt();
-                int p = readInt();
-                int q = readInt();
-                if(wT*t+wA*a+wP*p+wQ*q>=50.0){
-                    passed++;
-                }
+        int num [][] = new int [2][2];
+        num[0][0]=1;
+        num[0][1]=2;
+        num[1][0]=3;
+        num[1][1]=4;
+        String a = readLine();
+        boolean b[] = new boolean[2];
+        for(int i=0; i<a.length(); i++){
+            if(a.charAt(i)=='V'){
+                b[0]=!b[0];
+            }else{
+                b[1]=!b[1];
             }
-            System.out.println(passed);
         }
+        //vertical
+        if(b[0]){
+            for(int i=0; i<2; i++){
+                int c =0;
+                c=num[i][0];
+                num[i][0]=num[i][1];
+                num[i][1]=c;
+            }
+        }
+        if(b[1]){
+            for(int i=0; i<2; i++){
+                int c =0;
+                c=num[0][i];
+                num[0][i]=num[1][i];
+                num[1][i]=c;
+            }
+        }
+        System.out.println(num[0][0]+" "+num[0][1]);
+        System.out.println(num[1][0]+" "+num[1][1]);
     }
 
 
