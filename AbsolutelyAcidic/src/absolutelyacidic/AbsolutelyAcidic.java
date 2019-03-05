@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package bridgetransport;
+package absolutelyacidic;
 
 import java.util.*;
 import java.io.*;
@@ -13,7 +13,7 @@ import java.io.*;
  *
  * @author Joshua
  */
-public class BridgeTransport {
+public class AbsolutelyAcidic {
 
     /**
      * @param args the command line arguments
@@ -23,33 +23,7 @@ public class BridgeTransport {
 
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
-        int maxWeight = readInt();
-        int size = readInt();
-        Queue<Integer> onBridge = new LinkedList<Integer>();
-        int totalWeight = 0;
-        int carsPassed = 0;
-        for(int i=0; i<Integer.min(4, size); i++){
-            int carWeight = readInt();
-            totalWeight+=carWeight;
-            onBridge.add(carWeight);
-            if(totalWeight>maxWeight){
-                System.out.println(carsPassed);
-                System.exit(0);
-            }
-            carsPassed++;
-        }
-        for(int i=0; i<size-4; i++){
-            totalWeight-=onBridge.remove();
-            int carWeight = readInt();
-            totalWeight+=carWeight;
-            onBridge.add(carWeight);
-            if(totalWeight>maxWeight){
-                System.out.println(carsPassed);
-                System.exit(0);
-            }
-            carsPassed++;
-        }
-        System.out.println(size);
+
     }
 
     static String next () throws IOException {
