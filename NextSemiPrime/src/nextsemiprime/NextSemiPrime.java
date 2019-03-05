@@ -27,36 +27,31 @@ public class NextSemiPrime {
         int size = readInt();
         for(int i=0; i<size; i++){
             int a = readInt()+1;
-            while(!isSemiPrime(a)){
-                a++;
-            }
-            System.out.println(a);
+            semiprime(a);
+//            while(!semiPrime(a)){
+//                a++;
+//            }
+//            System.out.println(a);
         }
     }
-    static boolean isSemiPrime(int b){
-        String a = "";
-        int i=2;
-        int counter = 0;
-        while(i<=Math.sqrt(b)||b==1){
-            if(b%i==0){
-                a+=i+" ";
-                b/=i;
-                counter++;
-            }else{
-                i++;
-            }
-            if(counter>2){
-                return false;
-            }
+    static int checkSemiprime(int num){ 
+        int cnt = 0; 
+      
+        for (int i = 2; cnt < 2 && i * i <= num; ++i){
+                       
+            while (num % i == 0){ 
+                num /= i; 
+                ++cnt; 
+                } 
         }
-        if(b!=1){
-            counter++;
-        }
-        if(counter==2){
-        return true;
-        }
-        return false;
+        if (num > 1) ++cnt; 
+        return cnt == 2 ? 1 : 0; 
     }
+    static void semiprime(int n){ 
+        if (checkSemiprime(n) != 0) System.out.printf("True\n"); 
+        else System.out.printf("False\n"); 
+    } 
+      
 
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())

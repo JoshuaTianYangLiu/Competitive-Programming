@@ -5,8 +5,8 @@
  */
 package listminimum;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 /**
  *
@@ -17,30 +17,49 @@ public class ListMinimum {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static StringTokenizer st;
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        Scanner in = new Scanner(System.in);
-        int a = in.nextInt();
-        int b = in.nextInt();
-        if(a>=b){
-            System.out.println("Congratulations, you are within the speed limit!");
-        }else if(b-a<=20){
-            System.out.println("You are speeding and your fine is $100.");
-        }else if(b-a<=30){
-            System.out.println("You are speeding and your fine is $270.");
-        }else{
-            System.out.println("You are speeding and your fine is $500.");
+        int size = readInt();
+        List<Integer> a = new ArrayList<Integer>();
+        for(int i=0; i<size; i++){
+            a.add(readInt());
         }
+        Collections.sort(a);
+        for(int i=0; i<size; i++){
+            System.out.println(a.get(i));
+        }
+    }
+
+
+    static String next () throws IOException {
+        if (st == null || !st.hasMoreTokens())
+            st = new StringTokenizer(br.readLine());
+        return st.nextToken();
+    }
+
+    static long readLong() throws IOException {
+        return Long.parseLong(next());
+    }
+
+    static int readInt() throws IOException {
+         return Integer.parseInt(next());
+    }
+
+    static double readDouble() throws IOException {
+         return Double.parseDouble(next());
+    }
+
+    static char readCharacter() throws IOException {
+          return next().charAt(0);
+    }
+
+    static String readLine() throws IOException {
+        return br.readLine().trim();
     }
     
 }
-//Scanner in = new Scanner(System.in);
-//        int b = in.nextInt();
-//        int[] a = new int[b];
-//        for(int i = 0 ; i<b; i++){
-//            a[i]=in.nextInt();
-//        }
-//        Arrays.sort(a);
-//        for(int i = 0; i<b; i++){
-//            System.out.println(a[i]);
-//        } 
