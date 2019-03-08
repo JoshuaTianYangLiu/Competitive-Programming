@@ -4,11 +4,10 @@
  * and open the template in the editor.
  */
 
-package howmany5s;
+package inversemod;
 
 import java.util.*;
 import java.io.*;
-import java.math.BigInteger;
 
 /**
  *
@@ -16,7 +15,7 @@ import java.math.BigInteger;
  */
 
 
-public class HowMany5s {
+public class InverseMod {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
@@ -25,32 +24,17 @@ public class HowMany5s {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = readInt();
-        long r = readInt();
-        BigInteger num = new BigInteger(next());
-        //long num =readLong();
-        BigInteger a = new BigInteger("0");
-        BigInteger temp = new BigInteger("0");
-        for(int i=1; i<size; i++){
-            a = new BigInteger(next());
-            temp = a;
-            a = a.multiply(num);
-            num = num.gcd(temp);
-            num = a.divide(num);
-            //(a*num/gcd(a,num))%1000000007;
+        int r = readInt();
+        int s = readInt();
+        for(int i=1; i<=s; i++){
+            if((r*i)%s==1){
+                System.out.println(i);
+                System.exit(0);
+            }
         }
-        num = num.add(BigInteger.valueOf(r));
-        System.out.println(num.remainder(BigInteger.valueOf(1000000007)));
+        System.out.println("No such integer exists.");
     }
 
-    static long gcd(long a,long b) {
-        while (b != 0) {
-            long t =a;
-            a=b;
-            b=t%b;
-        }
-        return a;
-    }
 
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())

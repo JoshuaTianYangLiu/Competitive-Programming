@@ -24,13 +24,38 @@ public class SlotMachine {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int Q = readInt();
+        int q = readInt();
         int s1 = readInt();
         int s2 = readInt();
         int s3 = readInt();
-        
+        int out =0;
+        while(q!=0){
+            q--;
+            out++;
+            s1++;
+            if(s1==35){
+                s1=0;
+                q+=30;
+            }
+            if(q==0)break;
+            q--;
+            out++;
+            s2++;
+            if(s2==100){
+                s2=0;
+                q+=60;
+            }
+            if(q==0) break;
+            q--;
+            out++;
+            s3++;
+            if(s3==10){
+                s3=0;
+                q+=9;
+            }
+        }
+        System.out.println("Martha plays "+out+" times before going broke.");
     }
-    static int sim()
 
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())

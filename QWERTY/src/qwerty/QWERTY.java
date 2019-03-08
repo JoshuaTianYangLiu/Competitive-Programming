@@ -4,11 +4,10 @@
  * and open the template in the editor.
  */
 
-package howmany5s;
+package qwerty;
 
 import java.util.*;
 import java.io.*;
-import java.math.BigInteger;
 
 /**
  *
@@ -16,7 +15,7 @@ import java.math.BigInteger;
  */
 
 
-public class HowMany5s {
+public class QWERTY {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
@@ -25,33 +24,29 @@ public class HowMany5s {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = readInt();
-        long r = readInt();
-        BigInteger num = new BigInteger(next());
-        //long num =readLong();
-        BigInteger a = new BigInteger("0");
-        BigInteger temp = new BigInteger("0");
-        for(int i=1; i<size; i++){
-            a = new BigInteger(next());
-            temp = a;
-            a = a.multiply(num);
-            num = num.gcd(temp);
-            num = a.divide(num);
-            //(a*num/gcd(a,num))%1000000007;
+        
+        int size =readInt();
+        String in = readLine();
+        int max =0;
+        int c =0;
+        for(int i=0; i<size; i++){
+            if(a(in.charAt(i))){
+                c++;
+                if(c>max) max=c;
+            }else{
+                c=0;
+            }
         }
-        num = num.add(BigInteger.valueOf(r));
-        System.out.println(num.remainder(BigInteger.valueOf(1000000007)));
+        System.out.println(max);
     }
 
-    static long gcd(long a,long b) {
-        while (b != 0) {
-            long t =a;
-            a=b;
-            b=t%b;
+    static boolean a(char in){
+        char letters[] = {'Q','W','E','R','T','A','S','D','F','G','Z','X','C','V','B'}; //15 elements
+        for(int j=0; j<15; j++){
+            if(in==letters[j])return true;
         }
-        return a;
+        return false;
     }
-
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());
