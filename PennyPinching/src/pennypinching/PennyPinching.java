@@ -38,7 +38,7 @@ public class PennyPinching {
             tempA=Math.round(tempA);
             tempA%=10;
             tempA = Math.round(tempA);
-            if(tempA>2){
+            if((tempA>2&&tempA<5)||(tempA>7&&tempA<10)){
                 upList[(int)tempA-3].add(a);
             }else{
                 total+=round(temp);

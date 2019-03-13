@@ -22,10 +22,6 @@ public class QuestionsA {
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
         for(int j=0; j<10; j++){
-            BigDecimal t;
-            BigDecimal a;
-            BigDecimal p;
-            BigDecimal q;
             double wT = readDouble()/100;
             double wA = readDouble()/100;
             double wP = readDouble()/100;
@@ -33,11 +29,10 @@ public class QuestionsA {
             int size = readInt();
             int passed =0;
             for(int i=0; i<size; i++){
-                t = new BigDecimal(next());
-                a = new BigDecimal(next());
-                p = new BigDecimal(next());
-                q = new BigDecimal(next());
-
+                int t = readInt();
+                int a = readInt();
+                int p = readInt();
+                int q = readInt();
                 if(wT*t+wA*a+wP*p+wQ*q>=50.0){
                     passed++;
                 }

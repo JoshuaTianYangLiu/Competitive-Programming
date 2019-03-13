@@ -7,8 +7,6 @@ package fibonaccisequence;
 
 import java.io.*;
 import java.math.BigDecimal;
-import java.math.MathContext;
-import java.math.RoundingMode;
 import java.util.*;
 
 /**
@@ -25,12 +23,46 @@ public class FibonacciSequence {
     
     public static void main(String[] args)throws IOException {
         double phi = (Math.sqrt(5)+1)/2;
+        BigDecimal n1 = new BigDecimal(phi);
+        BigDecimal n2 = new BigDecimal(-1*phi);
+        BigDecimal d = new BigDecimal(Math.sqrt(5));
         long a = readLong();
         if(a<3){
             System.out.println(1);
         }else{
-            System.out.println(Math.round(((Math.pow(phi,a)-Math.pow(1-phi,a))/Math.sqrt(5)))%1000000007);
+            n1=
         }
+    }
+    static int fib(int n){ 
+    int F[][] = new int[][]{{1,1},{1,0}}; 
+    if (n == 0) 
+        return 0; 
+    power(F, n-1); 
+       
+    return F[0][0]; 
+    } 
+       
+    static void multiply(int F[][], int M[][]){ 
+    int x =  F[0][0]*M[0][0] + F[0][1]*M[1][0]; 
+    int y =  F[0][0]*M[0][1] + F[0][1]*M[1][1]; 
+    int z =  F[1][0]*M[0][0] + F[1][1]*M[1][0]; 
+    int w =  F[1][0]*M[0][1] + F[1][1]*M[1][1]; 
+      
+    F[0][0] = x; 
+    F[0][1] = y; 
+    F[1][0] = z; 
+    F[1][1] = w; 
+    }
+    static void power(int F[][], int n){ 
+    if( n == 0 || n == 1) 
+      return; 
+    int M[][] = new int[][]{{1,1},{1,0}}; 
+       
+    power(F, n/2); 
+    multiply(F, F); 
+       
+    if (n%2 != 0) 
+       multiply(F, M); 
     }
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())

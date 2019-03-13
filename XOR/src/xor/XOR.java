@@ -28,19 +28,16 @@ public class XOR {
         for(int i=0; i<size; i++){
             int s =readInt();
             int f =readInt();
-            int result = CalcResult(s, f);
-            System.out.printf("%15s %n",Integer.toBinaryString(result));
+            int result = s;
+            for(int j=s+1; j<=f; j++){
+                result^=j;
+            }
+            System.out.println(Integer.toBinaryString((s-1)^f));
+            System.out.println(Integer.toBinaryString(result));
             
         }
     }
 
-    static int  CalcResult(int s, int f)
-    {
-        int ;
-        int difference= f-s+1;
-        return 0;
-
-    }
 
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())

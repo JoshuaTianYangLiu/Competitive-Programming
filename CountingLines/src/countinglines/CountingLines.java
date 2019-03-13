@@ -17,15 +17,46 @@ import java.io.*;
 
 public class CountingLines {
 
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static StringTokenizer st;
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws IOException {
-        Scanner input = new Scanner(System.in);
-        int count=0;
-        while(input.hasNextLine()){
-            input.nextLine();
+    public static void main(String[] args) throws Exception{
+        // TODO code application logic here
+        int count =0;
+        Scanner a = new Scanner(System.in);
+        while(a.hasNextLine()){
+            a.nextLine();
             count++;
         }
+        System.out.println(count);
+    }
+
+
+    static String next () throws IOException {
+        if (st == null || !st.hasMoreTokens())
+            st = new StringTokenizer(br.readLine());
+        return st.nextToken();
+    }
+
+    static long readLong() throws IOException {
+        return Long.parseLong(next());
+    }
+
+    static int readInt() throws IOException {
+         return Integer.parseInt(next());
+    }
+
+    static double readDouble() throws IOException {
+         return Double.parseDouble(next());
+    }
+
+    static char readCharacter() throws IOException {
+          return next().charAt(0);
+    }
+
+    static String readLine() throws IOException {
+        return br.readLine().trim();
     }
 }

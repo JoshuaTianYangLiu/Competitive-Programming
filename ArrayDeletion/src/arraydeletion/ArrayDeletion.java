@@ -35,13 +35,13 @@ public class ArrayDeletion {
         for(int i=0; i<removing; i++){
             int x = readInt()-1;
             b.add(a.get(x));
-            a.remove(x-1);
+            a.remove(x);
         }
         }catch(Exception e){
             System.out.println("Out of bounds");
             System.exit(0);
         }
-        Collections.sort(b);
+        //Collections.sort(b);
         String out = "";
         for(int i=0; i<removing; i++){
             out += Integer.toString(b.get(i))+" ";
