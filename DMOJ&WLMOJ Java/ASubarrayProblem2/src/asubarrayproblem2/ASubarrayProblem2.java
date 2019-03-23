@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package roundtosecondprime;
+package asubarrayproblem2;
 
 import java.util.*;
 import java.io.*;
@@ -15,7 +15,7 @@ import java.io.*;
  */
 
 
-public class RoundToSecondPrime {
+public class ASubarrayProblem2 {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
@@ -24,7 +24,45 @@ public class RoundToSecondPrime {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        
+        int n = readInt();
+        int k = readInt();
+        int in[] = new int[n];
+        int s=0;
+        int e=k;
+        int oneSum[] = new int[n-k+1];
+        for(int i=0; i<n; i++){
+            in[i]=readInt();
+        }
+        int sum=0;
+        for(int i=0; i<k; i++){
+            sum+=in[i];
+        }
+        oneSum[0]=sum;
+        for(int i=1; i<n-k+1; i++){
+            sum+=in[e++];
+            sum-=in[s++];
+            oneSum[i]=sum;
+        }
+        s=0;
+        e=k-1;
+        sum=0;
+        int max=0;
+        for(int i=0; i<k-1; i++){
+            sum+=in[i];
+        }
+        max=sum;
+        for(int i=1; i<n-k+2; i++){
+            sum+=in[e++];
+            sum-=in[s++];
+            if(max<sum){
+                max=sum;
+            }
+        }
+        int out=0;
+        for(int i=0; i<n-k+1; i++){
+            if(oneSum[i]>max)out++;
+        }
+        System.out.println(out);
     }
 
 

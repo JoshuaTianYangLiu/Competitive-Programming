@@ -4,10 +4,11 @@
  * and open the template in the editor.
  */
 
-package roundtosecondprime;
+package asubarrayproblem;
 
 import java.util.*;
 import java.io.*;
+import java.math.BigInteger;
 
 /**
  *
@@ -15,8 +16,8 @@ import java.io.*;
  */
 
 
-public class RoundToSecondPrime {
-
+public class ASubarrayProblem {
+    
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     /**
@@ -24,10 +25,35 @@ public class RoundToSecondPrime {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        
+        int size = readInt();
+        int a[] = new int[size];
+        for(int i=0; i<size; i++){
+            a[i]=readInt();
+        }
+        Stack<Integer> s = new Stack<Integer>();
+        int b[] = new int[size];
+        int b1[] = new int[size];
+        for(int i=0; i<size; ++i){
+            while(!s.isEmpty()&&a[i]<=a[s.peek()]) s.pop();
+            if(s.isEmpty()) b[i]=-1;
+            else b[i] = s.peek();
+            s.push(i);
+        }
+        s=new Stack<Integer>();
+        for(int i=size-1; i>=0; i--){
+            while(!s.isEmpty()&&a[i]<a[s.peek()]) s.pop();
+            if(s.isEmpty()) b1[i]=size;
+            else b1[i]=s.peek();
+            s.push(i);
+        }
+        long out=0;
+        BigInteger o = new BigInteger("0");
+        for(int i=0; i<size; ++i){
+            o=o.add(BigInteger.valueOf((i-b[i])*(b1[i]-i)*a[i]));
+        }
+        System.out.println(o);
     }
-
-
+    
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());

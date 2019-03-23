@@ -25,12 +25,22 @@ public class PennyPinching {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = readInt();
+        int size = 10;//readInt()
         double total =0;
+        Random r = new Random();
+        double testTotal=(double)r.nextInt(5000)/100.0;
+        double testOut=testTotal;
+        double testIn[] = new double[10];
+        for(int i=1; i<size; i++){
+            testIn[i]=(double)r.nextInt(500)/100.0;
+            testTotal-=testIn[i];
+        }
+        testIn[9]=testTotal;
+        
         ArrayList<Double> upList[] = new ArrayList[7];
         for(int i=0; i<7; i++) upList[i] = new ArrayList<Double>();
         for(int i=0; i<size; i++){
-            double a = readDouble();
+            double a = testIn[i];//readDouble
             double temp =a;
             temp = round(a);
             double tempA = a;
@@ -65,6 +75,8 @@ public class PennyPinching {
         total+=round(temp);
         DecimalFormat dc = new DecimalFormat("0.00");
         System.out.println(dc.format(total));
+        System.out.println(dc.format(testOut));
+        for(int i=0; i<size; i++)System.out.print(testIn[i]+" ");
     }
 
     static double round(double a){
