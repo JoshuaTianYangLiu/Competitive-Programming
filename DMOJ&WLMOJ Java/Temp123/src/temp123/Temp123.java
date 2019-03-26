@@ -24,12 +24,11 @@ public class Temp123 {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int a = readInt();
-        for(int i=1; i<=a; i++){
-            for(int j=0; j<i-1; j++){
-                System.out.print(i);
-            }
-            System.out.println(i);
+        long out =1;
+        for(int i=1;i<=4000; i++){
+            System.out.print(out+",");
+            out*=i;
+            out%=1000000007;
         }
     }
 
