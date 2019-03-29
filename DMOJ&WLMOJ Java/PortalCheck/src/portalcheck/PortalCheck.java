@@ -31,7 +31,7 @@ public class PortalCheck {
             int count=0;
             rank = new int[q];
             p = new int[q];
-            HashMap<String, Integer> h = new HashMap<>(2*q); 
+            Hashtable<String,Integer> h = new Hashtable<String,Integer>(200000);
             for(int j=0; j<q; j++){
                 p[j]=j;
             }
@@ -54,10 +54,9 @@ public class PortalCheck {
                     int x=findSet(in1);
                     int y=findSet(in2);
                     
-                    if (x != y){
-                        if (rank[x]>rank[y]) p[y] =x;
-                        else p[x]=y;
-                    }
+                    if (rank[x]>rank[y]) p[y] =x;
+                    else p[x]=y;
+                    if(rank[x]==rank[y])rank[x]++;
                 }else{
                     if(findSet(in1)==findSet(in2))System.out.println("connected");
                     else System.out.println("not connected");

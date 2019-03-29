@@ -8,7 +8,6 @@ package pusheendesignsasushiboat;
 
 import java.util.*;
 import java.io.*;
-import java.math.BigInteger;
 
 /**
  *
@@ -23,37 +22,28 @@ public class PusheenDesignsASushiBoat {
     /**
      * @param args the command line arguments
      */
+    static long dp[][];
+    static int a[];
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
         int size = readInt();
-        int a[] = new int[size+1];
+        a = new int[size+1];
         int k=readInt();
-        int n=0;
-        for(int i=0; i<size; i++){
-            int temp = readInt();
-            if(a[temp]==0)n++;
-            a[temp]++;
-        }
-        int b[] = new int[n];
-        n=0;
-        for(int i=0; i<=size; i++){
-            if(a[i]!=0){
-                b[n]=a[i];
-                n++;
-            }
-        }
-        int out=0;
-        BigInteger product;
-        for (int i=0; i<=n-k; i++) { 
-            product=new BigInteger("1");
-            for (int j = i; j < k + i; j++) product=product.multiply(BigInteger.valueOf(b[j]));
-            product=product.mod(BigInteger.valueOf(998244353));
-            out+=product.intValue(); 
-            out%=998244353;
-        } 
-        System.out.println(out);
+        dp=new long[size+1][k+1];
+        for(int i=0; i<size; i++)a[readInt()]++;
+        System.out.println(n(size,k));
     }
-
+    static long n(int n,int k){
+        if (k==0){
+            return 1;
+        }
+        if (n==0){
+            return 0;
+        }
+        if(dp[n][k]!=0)return dp[n][k];
+        dp[n][k]= n(n-1,k)%998244353+(a[n]*n(n-1,k-1))%998244353;
+        return dp[n][k];
+    }
 
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())

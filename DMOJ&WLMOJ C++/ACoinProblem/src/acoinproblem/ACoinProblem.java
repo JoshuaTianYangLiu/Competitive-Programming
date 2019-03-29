@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package returnofaplusb;
+package acoinproblem;
 
 import java.util.*;
 import java.io.*;
@@ -15,30 +15,60 @@ import java.io.*;
  */
 
 
-public class ReturnOfAPlusB {
+public class ACoinProblem {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
-    static StringTokenizer st1;
     /**
      * @param args the command line arguments
      */
+    static int coin[];
+    static int dp[][]=new int[10001][10001];
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = Integer.parseInt(br.readLine());
+        int size = readInt();
+        int q = readInt();
+        coin=new int[size];
         for(int i=0; i<size; i++){
-            String temp = readLine();
-            st1= new StringTokenizer(temp);
-            try{
-                int a = Integer.parseInt(st1.nextToken());
-                int b = Integer.parseInt(st1.nextToken());
-                System.out.println(a+b);
-            }catch(Exception e){
-                System.out.println();
+            coin[i]=readInt();
+        }
+        for(int i=0; i<10001; i++){
+            for(int j=0; j<10001; j++){
+                dp[i][j]=-2;
             }
         }
+        
+        for(int i=0; i<q; i++){
+            int a = readInt();
+            int b = readInt();
+            System.out.println(find(a,b));
+        }
     }
-    
+    static int find(int n,int q){
+        if(n==0){
+            dp[n][q]=0;
+            return 0;
+        }
+        if(n<0){
+            return -1;
+        }
+        if(dp[n][q]!=-2)return dp[n][q];
+        int min=Integer.MAX_VALUE;
+        boolean changed=false;
+        for(int i=0; i<q;i++){
+            int a=find(n-coin[i],q);
+            if(n-coin[i]>-1)dp[n-coin[i]][q]=a;
+            if(a!=-1){
+                changed=true;
+                if(a<min)min=++a;
+            }
+        }
+        if(changed){
+            return min;
+        }
+        return -1;
+    }
+
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())
             st = new StringTokenizer(br.readLine());
@@ -65,4 +95,3 @@ public class ReturnOfAPlusB {
         return br.readLine().trim();
     }
 }
-
