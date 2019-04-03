@@ -8,7 +8,6 @@ package aplusbhard;
 
 import java.util.*;
 import java.io.*;
-import java.math.BigInteger;
 
 /**
  *
@@ -25,6 +24,7 @@ public class APlusBHard {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
+        //Done in C++
         int size = readInt();
         for(int i=0; i<size; i++){
             

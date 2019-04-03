@@ -19,12 +19,30 @@ using namespace std;
 /*
  * 
  */
-unsigned long long duplicatebits(unsigned long long b){
-    char s[100];
-    sprintf(s, "%b", b);
-    strcpy(s,"101");
-    unsigned long long c = strtoull(s,NULL,4 );
-    return c*3;
+unsigned long long duplicatebits(unsigned long long a){
+    unsigned long long b;
+    while(a){
+        if(a>>1==1){
+            b<<1;
+            b++;
+            b<<1;
+            b++;
+        }else b<<2;
+        a=a>>1;
+    }
+    unsigned long long count = sizeof(b) * 64 - 1; 
+    unsigned long long reverseNum = b; 
+      
+    b >>= 1;  
+    while(b) 
+    { 
+       reverseNum <<= 1;        
+       reverseNum |= b & 1; 
+       b >>= 1; 
+       count--; 
+    } 
+    reverseNum <<= count; 
+    return reverseNum;
 }
 int main() {
     for(;;){

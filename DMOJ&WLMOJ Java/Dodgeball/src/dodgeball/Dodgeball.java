@@ -24,24 +24,24 @@ public class Dodgeball {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = readInt();
-        String names="";
+        int size=readInt();
+        int total=0;
+        int temp=0;
+        char curChar='1';
         for(int i=0; i<size; i++){
-            names+=Character.toLowerCase(readCharacter())+"";
-        }
-        int j=0;
-        int total = 0;
-        for(int i=0; i<size;){
-            if(i<size&&names.charAt(j)==names.charAt(i)){
-                i++;
-                total++;
-            }else{
-                j++;
-                total++;
+            char a=readCharacter();
+            a=a>96?(char)(a-32):a;
+            if(curChar==a)temp++;
+            else{
+                total+=(temp*(temp+1))/2;
+                total%=1000000007;
+                temp=1;
+                curChar=a;
             }
-            
         }
-        System.out.println(total-1);
+        total+=(temp*(temp+1))/2;
+        total%=1000000007;
+        System.out.println(total);
     }
 
 

@@ -34,7 +34,7 @@ public class ReturnOfAPlusB {
                 int b = Integer.parseInt(st1.nextToken());
                 System.out.println(a+b);
             }catch(Exception e){
-                System.out.println();
+                System.out.println(1);
             }
         }
     }

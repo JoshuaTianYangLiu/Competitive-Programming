@@ -24,8 +24,17 @@ public class XOR {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        for(int i=1; i<4096; i++){
-            System.out.println(Integer.toBinaryString(i));
+        int size = readInt();
+        for(int i=0; i<size; i++){
+            int s=readInt()-1;
+            int e=readInt();
+            if(s%4==1)s=1;
+            else if(s%4==2)s++;
+            else if(s%4==3)s=0;
+            if(e%4==1)e=1;
+            else if(e%4==2)e++;
+            else if(e%4==3)e=0;
+            System.out.println(s^e);
         }
     }
 
