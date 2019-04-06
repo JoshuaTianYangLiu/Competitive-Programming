@@ -31,7 +31,8 @@ public class PrimeFactorization {
         int size = readInt();
         for(int c=0; c<size; c++){
             String a = "";
-            BigInteger b = new BigInteger(readLine());
+            BigInteger b = new BigInteger(readLine(),3);
+            b=new BigInteger(b.toString(10));
             int i=2;
             while(b.sqrt().compareTo(BigInteger.valueOf(i))!=-1||b.equals(new BigInteger("1"))){
                 if(b.remainder(BigInteger.valueOf(i)).equals(new BigInteger("0"))){
