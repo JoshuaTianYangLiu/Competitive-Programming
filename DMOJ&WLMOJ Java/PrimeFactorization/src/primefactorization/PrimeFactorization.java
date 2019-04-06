@@ -8,6 +8,7 @@ package primefactorization;
 
 import java.util.*;
 import java.io.*;
+import java.math.BigInteger;
 
 /**
  *
@@ -30,20 +31,19 @@ public class PrimeFactorization {
         int size = readInt();
         for(int c=0; c<size; c++){
             String a = "";
-            int b = readInt();
+            BigInteger b = new BigInteger(readLine());
             int i=2;
-            while(i<=Math.sqrt(b)||b==1){
-                if(b%i==0){
-                    a+=i+" ";
-                    b/=i;
+            while(b.sqrt().compareTo(BigInteger.valueOf(i))!=-1||b.equals(new BigInteger("1"))){
+                if(b.remainder(BigInteger.valueOf(i)).equals(new BigInteger("0"))){
+                    System.out.print(i+" ");
+                    b=b.divide(BigInteger.valueOf(i));
                 }else{
                     i++;
                 }
             }
-            if(b!=1){
-                a+=b+"";
+            if(!b.equals(new BigInteger("1"))){
+                System.out.print(b+"");
             }
-            System.out.println(a.trim());
         }
     }
 
