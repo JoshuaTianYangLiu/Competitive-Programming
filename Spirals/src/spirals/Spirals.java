@@ -23,7 +23,10 @@ public class Spirals {
 
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
-
+        int size = readInt();
+        for(int i=0; i<size; i++){
+            
+        }
     }
 
     static String next () throws IOException {
