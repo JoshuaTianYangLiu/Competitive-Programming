@@ -39,7 +39,7 @@ public class SawmillScheme {
                 q.add(b);
             }
         }
-        for(int i=1; i<=nodes; i++)if(g[i].size()==0)println(chance[i]);
+        for(int i=1; i<=nodes; i++)if(g[i].size()==0)System.out.println(chance[i]);
     }
     private static final int BUFFER_SIZE = 1 << 16;
 	private static DataInputStream din = new DataInputStream(System.in);

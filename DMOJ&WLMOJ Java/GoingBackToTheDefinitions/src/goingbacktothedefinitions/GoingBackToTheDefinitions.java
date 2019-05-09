@@ -31,7 +31,7 @@ public class GoingBackToTheDefinitions {
             String c=v+b.v;
             String d=b.v+v;
             
-            return Integer.compare(Integer.valueOf(c), Integer.valueOf(d));
+            return Long.compare(Long.valueOf(c), Long.valueOf(d));
         }
     }
     public static void main(String[] args) throws Exception{

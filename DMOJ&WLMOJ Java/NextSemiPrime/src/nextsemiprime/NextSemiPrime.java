@@ -24,33 +24,25 @@ public class NextSemiPrime {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        int size = readInt();
+        int cnt[]=new int[1000000001];
+        for(int i=2; i<1000000001; i++){
+            if(cnt[i]==0){
+                for(int j=i; j<1000000001; j+=i){
+                    cnt[j]++;
+                }
+            }
+        }
+        
+        System.out.println("e");
+        int size=readInt();
         for(int i=0; i<size; i++){
-            int a = readInt()+1;
-            semiprime(a);
-//            while(!semiPrime(a)){
-//                a++;
-//            }
-//            System.out.println(a);
+            int point=readInt();
+            while(cnt[point++]!=2){
+                
+            }
+            System.out.println(point);
         }
     }
-    static int checkSemiprime(int num){ 
-        int cnt = 0; 
-      
-        for (int i = 2; cnt < 2 && i * i <= num; ++i){
-                       
-            while (num % i == 0){ 
-                num /= i; 
-                ++cnt; 
-                } 
-        }
-        if (num > 1) ++cnt; 
-        return cnt == 2 ? 1 : 0; 
-    }
-    static void semiprime(int n){ 
-        if (checkSemiprime(n) != 0) System.out.printf("True\n"); 
-        else System.out.printf("False\n"); 
-    } 
       
 
     static String next () throws IOException {

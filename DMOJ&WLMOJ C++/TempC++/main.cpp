@@ -11,20 +11,43 @@
  * Created on March 26, 2019, 10:12 p.m.
  */
 
-#include<cstdio>
-#include<cstring>
-#include<cstdlib>
-#include<cmath>
-#include<iostream>
-#include<algorithm>
+#include <string>
+#include <bits/stdc++.h>
+
+
 using namespace std;
-int main()
-{
-    printf("1998\n");
 
-for(int i=2; i<1001; i++)
-  printf("%d 1 %d 2\n",i,i);
-
-for(int i=2; i<1001; i++)
-  printf("%d 1 %d 2\n",i,i);
+int size=8;
+int conv(int a){
+    int out=0;
+    int cnt=0;
+    for(int i=size-1; i>=0; i--){
+        out=out<<1;
+        if((a&(1<<i))!=0){
+            cnt++;
+        }else{
+            if(cnt<4&&cnt!=0){
+                out+=(1<<cnt)-1;
+            }
+            cnt=0;
+        }
+    }
+    out=out<<1;
+    if(cnt<4&&cnt!=0){
+        out+=(1<<cnt)-1;
+    }
+    return out;
+}
+int main(){
+    for(int j=128; j<160; j++){
+        int v=conv(j);
+        for (int i = 8; i >= 0; i--){
+            printf("%d",(j >> i) & 1);
+        }
+        printf("\n");
+        for (int i = 8; i >= 0; i--){
+            printf("%d",(v >> i) & 1);
+        }
+        printf("\n-----------\n");
+    }
 }

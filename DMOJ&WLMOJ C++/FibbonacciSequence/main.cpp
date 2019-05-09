@@ -13,25 +13,32 @@
 
 #include <string>
 #include <bits/stdc++.h>
-
+#define MM 1000000007
 using namespace std;
 
 /*
  * 
  */
-int fast_pow_mod(double b, int x, int mod) {
-		if (x == 0)
-			return 1;
-		if (x == 1)
-			return b;
-		if (x % 2 == 0)
-			return fast_pow_mod(b * b % mod, x / 2, mod) % mod;
-
-		return b * fast_pow_mod(b * b % mod, x / 2, mod) % mod;
-	}
-
-int main() {
-
-
+long long* mul(long long n[],long long m[]){
+    long long a=((n[0]*m[0])%MM+(n[1]*m[2])%MM)%MM;
+    long long b=((n[0]*m[1])%MM+(n[0]*m[3])%MM)%MM;
+    long long c=((n[2]*m[0])%MM+(n[3]*m[2])%MM)%MM;
+    long long d=((n[2]*m[1])%MM+(n[3]*m[3])%MM)%MM;
+    long long e[]={a,b,c,d};
+    return e;
+}
+long long def[]={1,1,1,1};
+long long* fast_pow_mod(long long b[], unsigned long long x) {
+    if (x == 0)return def;
+    if (x == 1)return b;
+    if (x % 2 == 0)return fast_pow_mod(mul(b,b), x / 2);
+    return mul(b,fast_pow_mod(mul(b,b), x / 2));
+}
+int main(){
+    unsigned long long n;
+    scanf("%llu",&n);
+    long long t[]={0,1,1,1};
+    long long* a=fast_pow_mod(t,n);
+    for(int i=0; i<4; i++)printf("%lld ",a[i]);
 }
 
