@@ -7,21 +7,21 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=Cygwin-Windows
-CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
+CND_PLATFORM_Debug=MinGW-Windows
+CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW-Windows
 CND_ARTIFACT_NAME_Debug=deathstar
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/deathstar
-CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/deathstar
+CND_PACKAGE_DIR_Debug=dist/Debug/MinGW-Windows/package
 CND_PACKAGE_NAME_Debug=deathstar.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/deathstar.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/deathstar.tar
 # Release configuration
-CND_PLATFORM_Release=Cygwin-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
+CND_PLATFORM_Release=MinGW-Windows
+CND_ARTIFACT_DIR_Release=dist/Release/MinGW-Windows
 CND_ARTIFACT_NAME_Release=deathstar
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/deathstar
-CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/deathstar
+CND_PACKAGE_DIR_Release=dist/Release/MinGW-Windows/package
 CND_PACKAGE_NAME_Release=deathstar.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/deathstar.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/deathstar.tar
 #
 # include compiler specific variables
 #
