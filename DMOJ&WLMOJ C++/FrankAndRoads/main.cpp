@@ -55,7 +55,7 @@ int main() {
     }
     int ans=0;
     for(int i=1; i<n; i++){
-        if(isMarket[i]&&dist[i]<t)ans++;
+        if(isMarket[i]&&dist[i]<t&&dist[i]!=-1)ans++;
     }
     printf("%d",ans);
 }
