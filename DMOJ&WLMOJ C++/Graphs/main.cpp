@@ -34,7 +34,7 @@ void uSet(int a, int b){
     }
 }
 vector<int> g[100001];
-pair<bool,int> went1[100001],went2[100001];
+int went1[100001],went2[100001];
 int main() {
     memset(rank1,0,sizeof(rank1));
     int nodes,edges,que;
@@ -53,35 +53,35 @@ int main() {
         scanf("%d %d",&a,&b);
         if(isSameSet(a,b)){
             //BFS
-            memset(went1,true,sizeof(went1));
-            memset(went2,true,sizeof(went2));
+            memset(went1,-1,sizeof(went1));
+            memset(went2,-1,sizeof(went2));
             queue<pair<int,int>> q1,q2;
             q1.push({a,0});
             q2.push({b,0});
-            went1[a]={false,0};
-            went2[b]={false,0};
+            went1[a]=0;
+            went2[b]=0;
             while(true){
                 pair<int,int> v=q1.front();
                 q1.pop();
-                if(!went2[v.first].first){
-                    printf("%d\n",v.second+went2[v.first].second);
+                if(went2[v.first]!=-1){
+                    printf("%d\n",v.second+went2[v.first]);
                     break;
                 }
                 for(int j=0; j<g[v.first].size(); j++){
-                    if(went1[g[v.first][j]].first){
-                        went1[g[v.first][j]]={false,v.second+1};
+                    if(went1[g[v.first][j]]==-1){
+                        went1[g[v.first][j]]=v.second+1;
                         q1.push({g[v.first][j],v.second+1});
                     }
                 }
                 v=q2.front();
                 q2.pop();
-                if(!went1[v.first].first){
-                    printf("%d\n",v.second+went1[v.first].second);
+                if(went1[v.first]!=-1){
+                    printf("%d\n",v.second+went1[v.first]);
                     break;
                 }
                 for(int j=0; j<g[v.first].size(); j++){
-                    if(went2[g[v.first][j]].first){
-                        went2[g[v.first][j]]={false,v.second+1};
+                    if(went2[g[v.first][j]]==-1){
+                        went2[g[v.first][j]]=v.second+1;
                         q2.push({g[v.first][j],v.second+1});
                     }
                 }
