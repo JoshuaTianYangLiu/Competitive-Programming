@@ -18,40 +18,28 @@ using namespace std;
 /*
  * 
  */
-vector<pair<int,pair<int,int>>> g[1001];
-double v[1001];
-int in[1001];
-int p[1001];
+vector<int> g[100001];
+int num[100001],low[100001];
+int artRoot=1;
+int dfsCounter=1;
+void artP(int u){
+    num[u]=low[u]=dfsCounter++;
+    for(int i=0; i<g[u].size(); i++){
+        
+    }
+}
 int main() {
-    int size;
-    for(int i=0; i<1001; i++)p[i]=1;
-    scanf("%d",&size);
-    for(int i=1; i<size; i++){
-        int a,b,c,d;
-        scanf("%d %d %d %d",&a,&b,&c,&d);
-        g[a].push_back({b,{c,d}});
+    memset(num,0,sizeof(num));
+    memset(low,0,sizeof(low));
+    int v,e;
+    scanf("%d %d",&v,&e);
+    for(int i=0; i<size; i++){
+        int a,b;
+        scanf("%d %d",&a,&b);
+        g[a].push_back(b);
+        g[b].push_back(a);
     }
-    for(int i=1; i<=size; i++)scanf("%d",&in[i]);
-    v[1]=1.0;
-    double ans=0;
-    for(int i=1; i<=size; i++){
-        for(int j=0; j<g[i].size(); j++){
-            pair<int,pair<int,int>> t;
-            t=g[i][j];
-            v[t.first]=v[i]*t.second.first/100.0;
-            if(t.second.second==1){
-                v[t.first]*=v[t.first];
-                p[t.first]=p[i]*2;
-            }else{
-                p[t.first]=p[i];
-            }
-        }
-        if(in[i]!=-1){
-            double t=pow(in[i],1.0/p[i])/pow(v[i],1.0/p[i]);
-            ans=max(ans,t);
-            
-        }
-    }
-    printf("%f",ans);
+    artP(1);
+    
 }
 
