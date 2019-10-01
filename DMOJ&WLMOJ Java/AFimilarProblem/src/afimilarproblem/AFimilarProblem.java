@@ -8,7 +8,6 @@ package afimilarproblem;
 
 import java.util.*;
 import java.io.*;
-import java.math.BigInteger;
 
 /**
  *
@@ -31,30 +30,25 @@ public class AFimilarProblem {
      */
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
-        long size = readLong();
-        long max = readLong();
-        List<Long> a= new ArrayList<Long>();
-        for(int i =0; i<size; i++){
-            a.add(readLong());
-        }
-        long finnum=0;
-        long num =0;
-        int pos =0;
-        BigInteger total = new BigInteger("0");
+        int size=readInt();
+        long max=readLong();
+        Queue<Long> a = new LinkedList<Long>();
+        long curMax=0;
+        int cnt=0;
+        int out=0;
         for(int i=0; i<size; i++){
-            pos =i;
-            while(total.compareTo(BigInteger.valueOf(max))<0&&pos<size){
-                total.add(BigInteger.valueOf(a.get(pos)));
-                num++;
-                pos++;
+            long b=readLong();
+            a.add(b);
+            curMax+=b;
+            cnt++;
+            while(curMax>=max){
+                long c=a.remove();
+                curMax-=c;
+                cnt--;
             }
-            total=BigInteger.ZERO;
-            if(num-1>finnum){
-                finnum=num-1;
-            }
-            num=0;
+            out=Math.max(cnt,out);
         }
-        System.out.println(finnum);
+        System.out.println(out);
     }
 
 

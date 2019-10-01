@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Harambe",
+            "request": "launch",
+            "mainClass": "abaseproblem.Harambe"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ABaseProblem",
+            "request": "launch",
+            "mainClass": "abaseproblem.ABaseProblem"
+        }
+    ]
+}

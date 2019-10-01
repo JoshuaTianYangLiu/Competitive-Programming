@@ -6,7 +6,7 @@
 package fibonaccisequence;
 
 import java.io.*;
-import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.*;
 
 /**
@@ -22,47 +22,25 @@ public class FibonacciSequence {
     static StringTokenizer st;
     
     public static void main(String[] args)throws IOException {
-        double phi = (Math.sqrt(5)+1)/2;
-        BigDecimal n1 = new BigDecimal(phi);
-        BigDecimal n2 = new BigDecimal(-1*phi);
-        BigDecimal d = new BigDecimal(Math.sqrt(5));
-        long a = readLong();
-        if(a<3){
-            System.out.println(1);
-        }else{
-            n1=
-        }
+        BigInteger a=new BigInteger(next());
+        long t[]={0,1,1,1};
+        long b[]=fast_pow_mod(t,a);
+        System.out.println(b[1]);
     }
-    static int fib(int n){ 
-    int F[][] = new int[][]{{1,1},{1,0}}; 
-    if (n == 0) 
-        return 0; 
-    power(F, n-1); 
-       
-    return F[0][0]; 
-    } 
-       
-    static void multiply(int F[][], int M[][]){ 
-    int x =  F[0][0]*M[0][0] + F[0][1]*M[1][0]; 
-    int y =  F[0][0]*M[0][1] + F[0][1]*M[1][1]; 
-    int z =  F[1][0]*M[0][0] + F[1][1]*M[1][0]; 
-    int w =  F[1][0]*M[0][1] + F[1][1]*M[1][1]; 
-      
-    F[0][0] = x; 
-    F[0][1] = y; 
-    F[1][0] = z; 
-    F[1][1] = w; 
+    static long[] def={1,0,0,1};
+    static long[] fast_pow_mod(long b[],BigInteger x){
+        if (x.equals(BigInteger.ZERO))return def;
+        if (x.equals(BigInteger.ONE))return b;
+        if (x.mod(BigInteger.TWO).equals(BigInteger.ZERO))return fast_pow_mod(mul(b,b), x.divide(BigInteger.valueOf(2)));
+        return mul(b,fast_pow_mod(mul(b,b), x.divide(BigInteger.valueOf(2))));
     }
-    static void power(int F[][], int n){ 
-    if( n == 0 || n == 1) 
-      return; 
-    int M[][] = new int[][]{{1,1},{1,0}}; 
-       
-    power(F, n/2); 
-    multiply(F, F); 
-       
-    if (n%2 != 0) 
-       multiply(F, M); 
+    static long[] mul(long n[],long m[]){
+        long a=((n[0]*m[0])%1000000007+(n[1]*m[2])%1000000007)%1000000007;
+        long b=((n[0]*m[1])%1000000007+(n[1]*m[3])%1000000007)%1000000007;
+        long c=((n[2]*m[0])%1000000007+(n[3]*m[2])%1000000007)%1000000007;
+        long d=((n[2]*m[1])%1000000007+(n[3]*m[3])%1000000007)%1000000007;
+        long e[]={a,b,c,d};
+        return e;
     }
     static String next () throws IOException {
         if (st == null || !st.hasMoreTokens())

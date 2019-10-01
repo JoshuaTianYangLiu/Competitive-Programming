@@ -18,28 +18,11 @@
  * 
  */
 int main(int argc, char** argv) {
-    int size;
-    scanf("%d\n",&size);
-    int total=0;
-    int temp=0;
-    char curChar='1';
-    char temp2[20];
-    char a;
-    for(int i=0; i<size; i++){
-        scanf("%s",temp2);
-        a=temp2[0];
-        if(a>96)a-=32;
-        if(curChar==a)temp++;
-        else{
-            total+=(temp*(temp+1))/2;
-            total%=1000000007;
-            temp=1;
-            curChar=a;
-        }
+    int uI;
+    int answer;
+    for(int x=uI-9; x<=uI; x++){
+        answer=x*10;
+        printf("10 x %d\t= %d\n",x,answer);
     }
-    total+=(temp*(temp+1))/2;
-    total%=1000000007;
-    printf("%d\n",total);
-    return 0;
 }
 
