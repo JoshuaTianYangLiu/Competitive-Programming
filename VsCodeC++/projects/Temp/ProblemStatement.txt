@@ -1,0 +1,31 @@
+Josh felt bored during his lessons, so he took out some pennies, laid them ~N (1 \le N \le 3000)~ of them in a row and stacked the coins such that each coin rests on ~2~ other coins. He began wondering how many ways could you stack pennies on top of each other if there are ~N~ pennies on the bottom row. Josh couldn't figure it out so he passed the problem to you.
+
+Given ~Q (1 \le Q \le 1000)~ queries, output the number of ways to stack pennies if there were ~N~ pennies on the bottom row. Output the answer modulo ~(10^9+7)~.
+
+## Input Specification
+
+The first list of input will contain an integer ~Q (1 \le Q \le 1000)~, the number of queries.
+
+The next ~Q~ lines will contain a single integer ~N (1 \le N \le 3000)~, the number of pennies on the bottom row.
+
+## Output Specification
+
+Output Q lines, the number of ways to stack the pennies modulo ~(10^9+7)~.
+
+## Sample Input
+    3
+    2
+    3
+    20
+
+## Sample Output
+    2
+    5
+    564120378
+
+## Explanation
+When ~N = 3~, there are 5 ways to place the pennies. The picture below are those five ways.
+
+![1]
+
+  [1]: https://i.ibb.co/ydzTHPY/K7uhK.png

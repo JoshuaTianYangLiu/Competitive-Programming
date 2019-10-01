@@ -11,7 +11,7 @@ int main() {
             if(!isalnum(j)&&!isalnum(a[i]^j)){
                 if((a[i]^j)>32&&(a[i]^j)<127){
                     printf("%c",a[i]);
-                    break;
+                    // break;
                 }
             }
             
@@ -24,7 +24,7 @@ int main() {
             if(!isalnum(j)&&!isalnum(a[i]^j)){
                 if((a[i]^j)>32&&(a[i]^j)<127){
                     printf("%c",j);
-                    break;
+                    // break;
                 }
             }
             
@@ -38,7 +38,7 @@ int main() {
             if(!isalnum(j)&&!isalnum(a[i]^j)){
                 if((a[i]^j)>32&&(a[i]^j)<127){
                     printf("%c",a[i]^j);
-                    break;
+                    // break;
                 }
             }
             
