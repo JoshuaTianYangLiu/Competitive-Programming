@@ -1,0 +1,34 @@
+//============================================================================
+// Name        : DiverseArray.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <bits/stdc++.h>
+
+using namespace std;
+int in[1000001];
+int freq[1000001];
+int main() {
+	int n,k;
+	scanf("%d %d",&n,&k);
+	for(int i=0; i<n; i++){
+		scanf("%d",&in[i]);
+	}
+	freq[in[0]]++;
+	int cnt=1;
+	int ans=0;
+	for(int l=0,r=0; r<n; r++){
+		if(cnt>=k){
+			ans+=n-r+1;
+			printf("%d %d\n",l,r);
+			if(--freq[in[l++]]==0)cnt--;
+		}else{
+			if(freq[in[r++]]++==0)cnt++;
+		}
+	}
+	printf("%d",ans);
+    return 0;
+}

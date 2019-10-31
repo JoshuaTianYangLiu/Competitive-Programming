@@ -1,0 +1,1033 @@
+20:45:11 **** Rebuild of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject
+20:46:14 **** Rebuild of configuration Debug for project WetMud ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "nbproject\\private\\c_standard_headers_indexer.o" "..\\nbproject\\private\\c_standard_headers_indexer.c" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "nbproject\\private\\cpp_standard_headers_indexer.o" "..\\nbproject\\private\\cpp_standard_headers_indexer.cpp" 
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\backward\strstream:50:0,
+                 from ..\nbproject\private\cpp_standard_headers_indexer.cpp:87:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\backward\backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+  ^~~~~~~
+g++ -o WetMud.exe main.o "nbproject\\private\\c_standard_headers_indexer.o" "nbproject\\private\\cpp_standard_headers_indexer.o" 
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+20:50:56 **** Rebuild of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+20:51:16 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud1
+Info: Nothing to build for WetMud1
+Info: Nothing to build for WetMud1
+Info: Nothing to build for WetMud1
+Info: Nothing to build for WetMud1
+Info: Nothing to build for WetMud1
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud1
+20:58:11 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file WetMud1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:58:46 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file WetMud1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+20:58:54 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file WetMud1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:58:57 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file WetMud1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+20:59:11 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file WetMud1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+20:59:22 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+Info: Nothing to build for WetMud1
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud1
+Info: Nothing to build for WetMud1
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud1
+20:59:49 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+..\src\WetMud1.cpp: In function 'int main()':
+..\src\WetMud1.cpp:42:5: error: 'else' without a previous 'if'
+     else printf("%d %d",dq.front(),l);
+     ^~~~
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+21:00:04 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+..\src\WetMud1.cpp: In function 'int main()':
+..\src\WetMud1.cpp:42:5: error: 'else' without a previous 'if'
+     else printf("%d %d",dq.front(),l);
+     ^~~~
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+21:00:08 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+..\src\WetMud1.cpp: In function 'int main()':
+..\src\WetMud1.cpp:42:5: error: 'else' without a previous 'if'
+     else printf("%d %d",dq.front(),l);
+     ^~~~
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+21:00:25 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+..\src\WetMud1.cpp: In function 'int main()':
+..\src\WetMud1.cpp:42:5: error: 'else' without a previous 'if'
+     else printf("%d %d",dq.front(),l);
+     ^~~~
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+21:00:42 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+..\src\WetMud1.cpp: In function 'int main()':
+..\src\WetMud1.cpp:42:5: error: 'else' without a previous 'if'
+     else printf("%d %d",dq.front(),l);
+     ^~~~
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+21:01:08 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+..\src\WetMud1.cpp: In function 'int main()':
+..\src\WetMud1.cpp:42:5: error: 'else' without a previous 'if'
+     else printf("%d %d",dq.front(),l);
+     ^~~~
+21:01:40 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+21:01:53 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+21:02:18 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+21:02:52 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+Info: Nothing to build for WetMud1
+Info: Nothing to build for WetMud1
+Info: Nothing to build for WetMud1
+Info: Nothing to build for WetMud1
+Info: Nothing to build for WetMud1
+21:05:55 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+21:06:15 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+21:07:39 **** Incremental Build of configuration Debug for project WetMud1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\WetMud1.o" "..\\src\\WetMud1.cpp" 
+g++ -o WetMud1.exe "src\\WetMud1.o" 
+14:17:25 **** Rebuild of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud1
+Info: Nothing to build for DiverseArray
+14:17:46 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+Info: Nothing to build for DiverseArray
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud1
+14:28:21 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+14:29:24 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+Info: Nothing to build for DiverseArray
+Info: Nothing to build for DiverseArray
+14:30:47 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+14:31:21 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+14:31:55 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+14:33:09 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+Info: Nothing to build for DiverseArray
+14:34:06 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+14:34:30 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+14:35:01 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+Info: Nothing to build for DiverseArray
+14:37:04 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+Info: Nothing to build for DiverseArray
+Info: Nothing to build for DiverseArray
+Info: Nothing to build for DiverseArray
+14:39:30 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+14:44:53 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+..\src\DiverseArray.cpp: In function 'int main()':
+..\src\DiverseArray.cpp:32:21: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld\n",ans);
+                     ^
+..\src\DiverseArray.cpp:32:21: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+Info: Nothing to build for DiverseArray
+14:51:06 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+..\src\DiverseArray.cpp: In function 'int main()':
+..\src\DiverseArray.cpp:31:21: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld\n",ans);
+                     ^
+..\src\DiverseArray.cpp:31:21: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+14:52:08 **** Incremental Build of configuration Debug for project DiverseArray ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DiverseArray.o" "..\\src\\DiverseArray.cpp" 
+..\src\DiverseArray.cpp: In function 'int main()':
+..\src\DiverseArray.cpp:31:21: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld\n",ans);
+                     ^
+..\src\DiverseArray.cpp:31:21: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o DiverseArray.exe "src\\DiverseArray.o" 
+Info: Nothing to build for DiverseArray
+16:46:46 **** Rebuild of configuration Debug for project Patrik ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Patrik.o" "..\\src\\Patrik.cpp" 
+g++ -o Patrik.exe "src\\Patrik.o" 
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud1
+16:46:56 **** Incremental Build of configuration Debug for project Patrik ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Patrik.o" "..\\src\\Patrik.cpp" 
+..\src\Patrik.cpp: In function 'int main()':
+..\src\Patrik.cpp:17:42: warning: format '%d' expects argument of type 'int*', but argument 2 has type 'long long int*' [-Wformat=]
+  for(int i=0; i<n; i++) scanf("%d",&in[i]);
+                                          ^
+..\src\Patrik.cpp:23:7: error: no match for 'operator+=' (operand types are 'int' and '__gnu_cxx::__alloc_traits<std::allocator<std::pair<int, int> > >::value_type {aka std::pair<int, int>}')
+    ans+=st.top()).second;
+    ~~~^~~~~~~~~~
+Info: Nothing to build for DiverseArray
+16:47:14 **** Incremental Build of configuration Debug for project Patrik ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Patrik.o" "..\\src\\Patrik.cpp" 
+..\src\Patrik.cpp: In function 'int main()':
+..\src\Patrik.cpp:17:42: warning: format '%d' expects argument of type 'int*', but argument 2 has type 'long long int*' [-Wformat=]
+  for(int i=0; i<n; i++) scanf("%d",&in[i]);
+                                          ^
+..\src\Patrik.cpp:23:7: error: no match for 'operator+=' (operand types are 'int' and '__gnu_cxx::__alloc_traits<std::allocator<std::pair<int, int> > >::value_type {aka std::pair<int, int>}')
+    ans+=st.top()).second;
+    ~~~^~~~~~~~~~
+Info: Nothing to build for TestProject
+Info: Nothing to build for WetMud
+Info: Nothing to build for WetMud1
+16:47:19 **** Incremental Build of configuration Debug for project Patrik ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Patrik.o" "..\\src\\Patrik.cpp" 
+..\src\Patrik.cpp: In function 'int main()':
+..\src\Patrik.cpp:17:42: warning: format '%d' expects argument of type 'int*', but argument 2 has type 'long long int*' [-Wformat=]
+  for(int i=0; i<n; i++) scanf("%d",&in[i]);
+                                          ^
+g++ -o Patrik.exe "src\\Patrik.o" 
+16:48:32 **** Incremental Build of configuration Debug for project Patrik ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Patrik.o" "..\\src\\Patrik.cpp" 
+..\src\Patrik.cpp: In function 'int main()':
+..\src\Patrik.cpp:17:42: warning: format '%d' expects argument of type 'int*', but argument 2 has type 'long long int*' [-Wformat=]
+  for(int i=0; i<n; i++) scanf("%d",&in[i]);
+                                          ^
+g++ -o Patrik.exe "src\\Patrik.o" 
+16:51:18 **** Incremental Build of configuration Debug for project Patrik ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Patrik.o" "..\\src\\Patrik.cpp" 
+..\src\Patrik.cpp: In function 'int main()':
+..\src\Patrik.cpp:17:42: warning: format '%d' expects argument of type 'int*', but argument 2 has type 'long long int*' [-Wformat=]
+  for(int i=0; i<n; i++) scanf("%d",&in[i]);
+                                          ^
+..\src\Patrik.cpp:30:19: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld",ans);
+                   ^
+..\src\Patrik.cpp:30:19: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o Patrik.exe "src\\Patrik.o" 
+16:52:12 **** Incremental Build of configuration Debug for project Patrik ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Patrik.o" "..\\src\\Patrik.cpp" 
+..\src\Patrik.cpp: In function 'int main()':
+..\src\Patrik.cpp:17:44: warning: unknown conversion type character 'l' in format [-Wformat=]
+  for(int i=0; i<n; i++) scanf("%lld",&in[i]);
+                                            ^
+..\src\Patrik.cpp:17:44: warning: too many arguments for format [-Wformat-extra-args]
+..\src\Patrik.cpp:30:19: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld",ans);
+                   ^
+..\src\Patrik.cpp:30:19: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o Patrik.exe "src\\Patrik.o" 
+16:52:33 **** Incremental Build of configuration Debug for project Patrik ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Patrik.o" "..\\src\\Patrik.cpp" 
+..\src\Patrik.cpp: In function 'int main()':
+..\src\Patrik.cpp:17:44: warning: unknown conversion type character 'l' in format [-Wformat=]
+  for(int i=0; i<n; i++) scanf("%lld",&in[i]);
+                                            ^
+..\src\Patrik.cpp:17:44: warning: too many arguments for format [-Wformat-extra-args]
+..\src\Patrik.cpp:30:19: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld",ans);
+                   ^
+..\src\Patrik.cpp:30:19: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o Patrik.exe "src\\Patrik.o" 
+Info: Nothing to build for Patrik
+17:55:23 **** Rebuild of configuration Debug for project PatrikV2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PatrikV2.o" "..\\src\\PatrikV2.cpp" 
+g++ -o PatrikV2.exe "src\\PatrikV2.o" 
+17:55:26 **** Rebuild of configuration Debug for project UnitingTheEarthEmpire ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\UnitingTheEarthEmpire.o" "..\\src\\UnitingTheEarthEmpire.cpp" 
+g++ -o UnitingTheEarthEmpire.exe "src\\UnitingTheEarthEmpire.o" 
+18:40:26 **** Incremental Build of configuration Debug for project Patrik ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Patrik.o" "..\\src\\Patrik.cpp" 
+..\src\Patrik.cpp: In function 'int main()':
+..\src\Patrik.cpp:17:43: warning: unknown conversion type character 'l' in format [-Wformat=]
+  for(int i=0; i<n; i++)scanf("%lld",&in[i]);
+                                           ^
+..\src\Patrik.cpp:17:43: warning: too many arguments for format [-Wformat-extra-args]
+..\src\Patrik.cpp:30:19: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld",ans);
+                   ^
+..\src\Patrik.cpp:30:19: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o Patrik.exe "src\\Patrik.o" 
+Info: Nothing to build for Patrik
+Info: Nothing to build for PatrikV2
+Info: Nothing to build for UnitingTheEarthEmpire
+18:43:50 **** Incremental Build of configuration Debug for project UnitingTheEarthEmpire ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\UnitingTheEarthEmpire.o" "..\\src\\UnitingTheEarthEmpire.cpp" 
+..\src\UnitingTheEarthEmpire.cpp: In function 'int main()':
+..\src\UnitingTheEarthEmpire.cpp:17:22: warning: unknown conversion type character 'l' in format [-Wformat=]
+   scanf("%lld",&in[i]);
+                      ^
+..\src\UnitingTheEarthEmpire.cpp:17:22: warning: too many arguments for format [-Wformat-extra-args]
+..\src\UnitingTheEarthEmpire.cpp:32:19: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld",ans);
+                   ^
+..\src\UnitingTheEarthEmpire.cpp:32:19: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o UnitingTheEarthEmpire.exe "src\\UnitingTheEarthEmpire.o" 
+22:55:46 **** Rebuild of configuration Debug for project BadNews ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BadNews.o" "..\\src\\BadNews.cpp" 
+g++ -o BadNews.exe "src\\BadNews.o" 
+Info: Nothing to build for Patrik
+Info: Nothing to build for PatrikV2
+Info: Nothing to build for UnitingTheEarthEmpire
+Info: Nothing to build for BadNews
+22:56:00 **** Incremental Build of configuration Debug for project BadNews ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BadNews.o" "..\\src\\BadNews.cpp" 
+..\src\BadNews.cpp: In function 'bool hasLet(int, int, int)':
+..\src\BadNews.cpp:19:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(charAt==strlen(word))return true;
+     ~~~~~~^~~~~~~~~~~~~~
+..\src\BadNews.cpp: In function 'int main()':
+..\src\BadNews.cpp:35:23: warning: format '%c' expects argument of type 'char*', but argument 2 has type 'int' [-Wformat=]
+    scanf("%c",in[i][j]);
+                       ^
+g++ -o BadNews.exe "src\\BadNews.o" 
+22:56:56 **** Incremental Build of configuration Debug for project BadNews ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BadNews.o" "..\\src\\BadNews.cpp" 
+..\src\BadNews.cpp: In function 'bool hasLet(int, int, int)':
+..\src\BadNews.cpp:19:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(charAt==strlen(word))return true;
+     ~~~~~~^~~~~~~~~~~~~~
+g++ -o BadNews.exe "src\\BadNews.o" 
+22:58:16 **** Incremental Build of configuration Debug for project BadNews ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BadNews.o" "..\\src\\BadNews.cpp" 
+..\src\BadNews.cpp: In function 'bool hasLet(int, int, int)':
+..\src\BadNews.cpp:19:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(charAt==strlen(word))return true;
+     ~~~~~~^~~~~~~~~~~~~~
+g++ -o BadNews.exe "src\\BadNews.o" 
+Info: Nothing to build for BadNews
+Info: Nothing to build for BadNews
+Info: Nothing to build for BadNews
+Info: Nothing to build for BadNews
+Info: Nothing to build for TestProject
+23:17:21 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:17:50 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject
+23:33:41 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+23:34:19 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for TestProject
+23:43:16 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for TestProject
+23:46:05 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for TestProject
+23:46:28 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:46:30 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:46:58 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for BadNews
+Info: Nothing to build for Patrik
+23:47:18 **** Incremental Build of configuration Debug for project PatrikV2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PatrikV2.o" "..\\src\\PatrikV2.cpp" 
+..\src\PatrikV2.cpp: In function 'int main()':
+..\src\PatrikV2.cpp:16:43: warning: unknown conversion type character 'l' in format [-Wformat=]
+  for(int i=0; i<n; i++)scanf("%lld",&in[i]);
+                                           ^
+..\src\PatrikV2.cpp:16:43: warning: too many arguments for format [-Wformat-extra-args]
+..\src\PatrikV2.cpp:22:19: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld",ans);
+                   ^
+..\src\PatrikV2.cpp:22:19: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o PatrikV2.exe "src\\PatrikV2.o" 
+23:47:21 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for UnitingTheEarthEmpire
+23:47:30 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:54:28 **** Rebuild of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+23:54:50 **** Clean-only build of configuration Debug for project BadNews ****
+rm -rf src/BadNews.d BadNews.exe src/BadNews.o 
+23:54:51 **** Clean-only build of configuration Debug for project Patrik ****
+rm -rf Patrik.exe src/Patrik.d src/Patrik.o 
+23:54:51 **** Clean-only build of configuration Debug for project PatrikV2 ****
+rm -rf src/PatrikV2.d PatrikV2.exe src/PatrikV2.o 
+23:54:51 **** Clean-only build of configuration Debug for project TestProject ****
+rm -rf TestProject.exe src/TestProject.d src/TestProject.o 
+23:54:51 **** Clean-only build of configuration Debug for project UnitingTheEarthEmpire ****
+rm -rf src/UnitingTheEarthEmpire.d UnitingTheEarthEmpire.exe src/UnitingTheEarthEmpire.o 
+23:55:06 **** Rebuild of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject
+23:58:43 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for TestProject
+00:02:44 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:02:53 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:03:21 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:03:37 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:10:29 **** Rebuild of configuration Debug for project BadNews ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BadNews.o" "..\\src\\BadNews.cpp" 
+..\src\BadNews.cpp: In function 'bool hasLet(int, int, int)':
+..\src\BadNews.cpp:19:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(charAt==strlen(word))return true;
+     ~~~~~~^~~~~~~~~~~~~~
+g++ -o BadNews.exe "src\\BadNews.o" 
+00:10:32 **** Rebuild of configuration Debug for project Patrik ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Patrik.o" "..\\src\\Patrik.cpp" 
+..\src\Patrik.cpp: In function 'int main()':
+..\src\Patrik.cpp:17:43: warning: unknown conversion type character 'l' in format [-Wformat=]
+  for(int i=0; i<n; i++)scanf("%lld",&in[i]);
+                                           ^
+..\src\Patrik.cpp:17:43: warning: too many arguments for format [-Wformat-extra-args]
+..\src\Patrik.cpp:30:19: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld",ans);
+                   ^
+..\src\Patrik.cpp:30:19: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o Patrik.exe "src\\Patrik.o" 
+00:10:34 **** Rebuild of configuration Debug for project PatrikV2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PatrikV2.o" "..\\src\\PatrikV2.cpp" 
+..\src\PatrikV2.cpp: In function 'int main()':
+..\src\PatrikV2.cpp:16:43: warning: unknown conversion type character 'l' in format [-Wformat=]
+  for(int i=0; i<n; i++)scanf("%lld",&in[i]);
+                                           ^
+..\src\PatrikV2.cpp:16:43: warning: too many arguments for format [-Wformat-extra-args]
+..\src\PatrikV2.cpp:22:19: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld",ans);
+                   ^
+..\src\PatrikV2.cpp:22:19: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o PatrikV2.exe "src\\PatrikV2.o" 
+00:10:37 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:10:38 **** Rebuild of configuration Debug for project UnitingTheEarthEmpire ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\UnitingTheEarthEmpire.o" "..\\src\\UnitingTheEarthEmpire.cpp" 
+..\src\UnitingTheEarthEmpire.cpp: In function 'int main()':
+..\src\UnitingTheEarthEmpire.cpp:17:22: warning: unknown conversion type character 'l' in format [-Wformat=]
+   scanf("%lld",&in[i]);
+                      ^
+..\src\UnitingTheEarthEmpire.cpp:17:22: warning: too many arguments for format [-Wformat-extra-args]
+..\src\UnitingTheEarthEmpire.cpp:32:19: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld",ans);
+                   ^
+..\src\UnitingTheEarthEmpire.cpp:32:19: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o UnitingTheEarthEmpire.exe "src\\UnitingTheEarthEmpire.o" 
+00:14:11 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for BadNews
+Info: Nothing to build for Patrik
+Info: Nothing to build for PatrikV2
+00:20:55 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for UnitingTheEarthEmpire
+Info: Nothing to build for TestProject
+16:20:47 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:21:17 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for BadNews
+Info: Nothing to build for Patrik
+Info: Nothing to build for PatrikV2
+16:21:31 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for UnitingTheEarthEmpire
+16:21:34 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:21:52 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for BadNews
+Info: Nothing to build for Patrik
+Info: Nothing to build for PatrikV2
+16:22:05 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for UnitingTheEarthEmpire
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject
+16:26:46 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject
+16:31:02 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:31:18 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+16:32:02 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for TestProject
+16:33:08 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:33:24 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+16:33:48 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+16:37:08 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+16:39:39 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+16:39:56 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:40:09 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for BadNews
+Info: Nothing to build for Patrik
+Info: Nothing to build for PatrikV2
+16:40:15 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TestProject.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for UnitingTheEarthEmpire
+16:40:21 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for TestProject
+Info: Nothing to build for BadNews
+Info: Nothing to build for Patrik
+Info: Nothing to build for PatrikV2
+Info: Nothing to build for TestProject
+16:52:19 **** Rebuild of configuration Debug for project TestProject1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject1.o" "..\\src\\TestProject1.cpp" 
+g++ -o TestProject1.exe "src\\TestProject1.o" 
+Info: Nothing to build for UnitingTheEarthEmpire
+16:52:32 **** Incremental Build of configuration Debug for project TestProject1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject1.o" "..\\src\\TestProject1.cpp" 
+g++ -o TestProject1.exe "src\\TestProject1.o" 
+16:59:01 **** Incremental Build of configuration Debug for project TestProject1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject1.o" "..\\src\\TestProject1.cpp" 
+g++ -o TestProject1.exe "src\\TestProject1.o" 
+16:59:29 **** Incremental Build of configuration Debug for project TestProject1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject1.o" "..\\src\\TestProject1.cpp" 
+g++ -o TestProject1.exe "src\\TestProject1.o" 
+17:19:23 **** Incremental Build of configuration Debug for project BadNews ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BadNews.o" "..\\src\\BadNews.cpp" 
+..\src\BadNews.cpp: In function 'bool hasLet(int, int, int)':
+..\src\BadNews.cpp:19:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(charAt==strlen(word))return true;
+     ~~~~~~^~~~~~~~~~~~~~
+g++ -o BadNews.exe "src\\BadNews.o" 
+17:19:25 **** Incremental Build of configuration Debug for project Patrik ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Patrik.o" "..\\src\\Patrik.cpp" 
+..\src\Patrik.cpp: In function 'int main()':
+..\src\Patrik.cpp:17:43: warning: unknown conversion type character 'l' in format [-Wformat=]
+  for(int i=0; i<n; i++)scanf("%lld",&in[i]);
+                                           ^
+..\src\Patrik.cpp:17:43: warning: too many arguments for format [-Wformat-extra-args]
+..\src\Patrik.cpp:30:19: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld",ans);
+                   ^
+..\src\Patrik.cpp:30:19: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o Patrik.exe "src\\Patrik.o" 
+17:19:28 **** Incremental Build of configuration Debug for project PatrikV2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PatrikV2.o" "..\\src\\PatrikV2.cpp" 
+..\src\PatrikV2.cpp: In function 'int main()':
+..\src\PatrikV2.cpp:16:43: warning: unknown conversion type character 'l' in format [-Wformat=]
+  for(int i=0; i<n; i++)scanf("%lld",&in[i]);
+                                           ^
+..\src\PatrikV2.cpp:16:43: warning: too many arguments for format [-Wformat-extra-args]
+..\src\PatrikV2.cpp:22:19: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld",ans);
+                   ^
+..\src\PatrikV2.cpp:22:19: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o PatrikV2.exe "src\\PatrikV2.o" 
+17:19:30 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+17:19:33 **** Incremental Build of configuration Debug for project TestProject1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject1.o" "..\\src\\TestProject1.cpp" 
+g++ -o TestProject1.exe "src\\TestProject1.o" 
+17:19:35 **** Incremental Build of configuration Debug for project UnitingTheEarthEmpire ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\UnitingTheEarthEmpire.o" "..\\src\\UnitingTheEarthEmpire.cpp" 
+..\src\UnitingTheEarthEmpire.cpp: In function 'int main()':
+..\src\UnitingTheEarthEmpire.cpp:17:22: warning: unknown conversion type character 'l' in format [-Wformat=]
+   scanf("%lld",&in[i]);
+                      ^
+..\src\UnitingTheEarthEmpire.cpp:17:22: warning: too many arguments for format [-Wformat-extra-args]
+..\src\UnitingTheEarthEmpire.cpp:32:19: warning: unknown conversion type character 'l' in format [-Wformat=]
+  printf("%lld",ans);
+                   ^
+..\src\UnitingTheEarthEmpire.cpp:32:19: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o UnitingTheEarthEmpire.exe "src\\UnitingTheEarthEmpire.o" 
+Info: Nothing to build for TestProject1
+Info: Nothing to build for BadNews
+17:21:56 **** Incremental Build of configuration Debug for project BadNews ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BadNews.o" "..\\src\\BadNews.cpp" 
+..\src\BadNews.cpp: In function 'bool hasLet(int, int, int)':
+..\src\BadNews.cpp:19:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(charAt==strlen(word))return true;
+     ~~~~~~^~~~~~~~~~~~~~
+g++ -o BadNews.exe "src\\BadNews.o" 
+17:23:20 **** Incremental Build of configuration Debug for project BadNews ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BadNews.o" "..\\src\\BadNews.cpp" 
+..\src\BadNews.cpp: In function 'bool hasLet(int, int, int)':
+..\src\BadNews.cpp:19:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(charAt==strlen(word))return true;
+     ~~~~~~^~~~~~~~~~~~~~
+g++ -o BadNews.exe "src\\BadNews.o" 
+17:24:03 **** Incremental Build of configuration Debug for project BadNews ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BadNews.o" "..\\src\\BadNews.cpp" 
+..\src\BadNews.cpp: In function 'bool hasLet(int, int, int)':
+..\src\BadNews.cpp:19:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(charAt==strlen(word))return true;
+     ~~~~~~^~~~~~~~~~~~~~
+g++ -o BadNews.exe "src\\BadNews.o" 
+17:26:23 **** Incremental Build of configuration Debug for project BadNews ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BadNews.o" "..\\src\\BadNews.cpp" 
+..\src\BadNews.cpp: In function 'bool hasLet(int, int, int)':
+..\src\BadNews.cpp:19:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(charAt==strlen(word))return true;
+     ~~~~~~^~~~~~~~~~~~~~
+g++ -o BadNews.exe "src\\BadNews.o" 
+17:27:04 **** Incremental Build of configuration Debug for project BadNews ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BadNews.o" "..\\src\\BadNews.cpp" 
+..\src\BadNews.cpp: In function 'bool hasLet(int, int, int)':
+..\src\BadNews.cpp:19:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(charAt==strlen(word))return true;
+     ~~~~~~^~~~~~~~~~~~~~
+g++ -o BadNews.exe "src\\BadNews.o" 
+17:27:36 **** Incremental Build of configuration Debug for project BadNews ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BadNews.o" "..\\src\\BadNews.cpp" 
+..\src\BadNews.cpp: In function 'bool hasLet(int, int, int)':
+..\src\BadNews.cpp:19:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(charAt==strlen(word))return true;
+     ~~~~~~^~~~~~~~~~~~~~
+g++ -o BadNews.exe "src\\BadNews.o" 
+20:02:13 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+20:02:32 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for BadNews
+20:05:33 **** Rebuild of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+Info: Nothing to build for Patrik
+Info: Nothing to build for PatrikV2
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject1
+Info: Nothing to build for UnitingTheEarthEmpire
+20:24:10 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+..\src\BinaryIndexedTreeTest.cpp: In function 'int main()':
+..\src\BinaryIndexedTreeTest.cpp:60:26: warning: format '%d' expects argument of type 'int*', but argument 2 has type 'int' [-Wformat=]
+   scanf("%d",prefixSum[i]);
+                          ^
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:25:02 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+..\src\BinaryIndexedTreeTest.cpp: In function 'int main()':
+..\src\BinaryIndexedTreeTest.cpp:60:26: warning: format '%d' expects argument of type 'int*', but argument 2 has type 'int' [-Wformat=]
+   scanf("%d",prefixSum[i]);
+                          ^
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:25:22 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+..\src\BinaryIndexedTreeTest.cpp: In function 'int main()':
+..\src\BinaryIndexedTreeTest.cpp:60:26: warning: format '%d' expects argument of type 'int*', but argument 2 has type 'int' [-Wformat=]
+   scanf("%d",prefixSum[i]);
+                          ^
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:25:40 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:27:16 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file BinaryIndexedTreeTest.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:28:09 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file BinaryIndexedTreeTest.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:29:18 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file BinaryIndexedTreeTest.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:29:45 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file BinaryIndexedTreeTest.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:29:56 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file BinaryIndexedTreeTest.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:31:06 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file BinaryIndexedTreeTest.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:31:30 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:31:52 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:32:05 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:32:17 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file BinaryIndexedTreeTest.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:53:12 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:53:32 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:53:47 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+..\src\BinaryIndexedTreeTest.cpp: In function 'int main()':
+..\src\BinaryIndexedTreeTest.cpp:77:4: error: 'prefixSum' was not declared in this scope
+    prefixSum[a]=b;
+    ^~~~~~~~~
+20:54:00 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:54:27 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:55:27 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:55:58 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:57:17 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:58:22 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:58:52 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+20:59:56 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+21:00:25 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file BinaryIndexedTreeTest.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:00:45 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file BinaryIndexedTreeTest.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:01:06 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+21:08:39 **** Incremental Build of configuration Debug for project BinaryIndexedTreeTest ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BinaryIndexedTreeTest.o" "..\\src\\BinaryIndexedTreeTest.cpp" 
+..\src\BinaryIndexedTreeTest.cpp: In function 'int main()':
+..\src\BinaryIndexedTreeTest.cpp:81:32: warning: unknown conversion type character 'l' in format [-Wformat=]
+    printf("%lld\n",query(l,r,2));
+                                ^
+..\src\BinaryIndexedTreeTest.cpp:81:32: warning: too many arguments for format [-Wformat-extra-args]
+..\src\BinaryIndexedTreeTest.cpp:85:32: warning: unknown conversion type character 'l' in format [-Wformat=]
+    printf("%lld\n",query(x,1,1));
+                                ^
+..\src\BinaryIndexedTreeTest.cpp:85:32: warning: too many arguments for format [-Wformat-extra-args]
+g++ -o BinaryIndexedTreeTest.exe "src\\BinaryIndexedTreeTest.o" 
+Info: Nothing to build for BinaryIndexedTreeTest
+Info: Nothing to build for BinaryIndexedTreeTest
+21:24:35 **** Incremental Build of configuration Debug for project TestProject ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestProject.o" "..\\src\\TestProject.cpp" 
+g++ -o TestProject.exe "src\\TestProject.o" 
+Info: Nothing to build for TestProject
+Info: Nothing to build for TestProject

@@ -1,0 +1,93 @@
+//============================================================================
+// Name        : BinaryIndexedTreeTest.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <bits/stdc++.h>
+
+using namespace std;
+pair<int,int> ft[100001];
+//freq sum
+int n,m;
+int prefixSum[100001],freqArr[100001];
+void update(int v,int ind,int opt){
+	//i+=i&-i
+	//i-=i&-i
+	if(opt==1){
+		while(v<=n){
+			ft[v].first+=ind;
+			v+=v&-v;
+		}
+	}else{
+		while(ind<=n){
+			ft[ind].second+=v;
+			ind+=ind&-ind;
+		}
+	}
+}
+int rfq(int v){
+	int sum=0;
+	while(v){
+		sum+=ft[v].first;
+		v-=v&-v;
+	}
+	return sum;
+}
+int rsq(int v){
+	int sum=0;
+	while(v){
+		sum+=ft[v].second;
+		v-=v&-v;
+	}
+	return sum;
+}
+int query(int l,int r,int opt){
+	// sub v
+	if(opt==1){
+		return rfq(l);
+	}else{
+		return rsq(r)-rsq(l-1);
+	}
+}
+int main() {
+	memset(prefixSum,0,sizeof(prefixSum));
+	memset(freqArr,0,sizeof(freqArr));
+	scanf("%d %d",&n,&m);
+	printf("Got Here");
+	for(int i=1;i<=n; i++){
+		scanf("%d",&prefixSum[i]);
+		freqArr[prefixSum[i]]++;
+	}
+//	printf("Got Here");
+//	for(int i=1; i<=n; i++){
+//		//freq
+//		update(freqArr[i],1,1);
+//		//sum
+//		update(prefixSum[i],i,2);
+//	}
+//	printf("Got Here");
+//	for(int i=0; i<m; i++){
+//		char option;
+//		scanf("%c ",&option);
+//		if(option=='C'){
+//			int a,b;
+//			scanf("%d %d",&a,&b);
+//			update(prefixSum[a],-1,1);
+//			prefixSum[a]=b;
+//			update(prefixSum[a],1,1);
+//			update(b-prefixSum[a],b,2);
+//		}else if(option=='S'){
+//			int l,r;
+//			scanf("%d %d",&l,&r);
+//			printf("%d\n",query(l,r,2));
+//		}else if(option=='Q'){
+//			int x;
+//			scanf("%d",&x);
+//			printf("%d\n",query(x,1,1));
+//		}
+//	}
+//    return 0;
+}

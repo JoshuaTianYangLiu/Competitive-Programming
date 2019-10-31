@@ -1,0 +1,20 @@
+//============================================================================
+// Name        : TestProject.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <bits/stdc++.h>
+#include <stdio.h>
+using namespace std;
+
+int main() {
+//	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	int a;
+	cin>>a;
+	cout<<a<<endl;
+//	printf("%d",scanf("%d",&a));
+	return 0;
+}
