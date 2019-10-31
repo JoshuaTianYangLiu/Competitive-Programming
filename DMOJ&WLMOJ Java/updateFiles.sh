@@ -6,7 +6,7 @@ for D in *; do
 		mv src/**/*.java $D.java;
 		fi
 		find . -type f ! -name '*.java' -delete
-		find . -type d -delete
+		rm -r */
 		echo "Updated Folder $D, Currect files $(ls)";
 	else
 		if [ ! -f *.java ]; then
