@@ -1,1 +1,0 @@
-visited[t]=true;

@@ -1,2 +1,0 @@
-();
-//   setresgid(gid, gid, gid);
