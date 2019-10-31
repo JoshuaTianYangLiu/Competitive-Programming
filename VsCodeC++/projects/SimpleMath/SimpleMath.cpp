@@ -3,13 +3,12 @@
 using namespace std;
 #define MM 1000000007
 pair<int,int> nodes[300001];
-bool visited[300001];
+bool visited[300001],visited2[300001];
 vector<pair<int,int>> graph[500001];
+int n,m,k;
 int main() {
-    memset(visited,false,sizeof(visited));
-    int n,m,k;
     scanf("%d %d %d",&n,&m,&k);
-    for(int i=1; i<=n;i++)nodes[i]={1,k};
+    for(int i=1; i<=n;i++)nodes[i]={0,0};
     for(int i=0,a,b,c; i<m; i++){
         scanf("%d %d %d",&a,&b,&c);
         graph[a].push_back({b,c});
@@ -18,23 +17,32 @@ int main() {
     long long finalAns=1;
     for(int i=1; i<=n; i++){
         if(!visited[i]){
-            int ans=k;
-            stack<pair<int,int>> s;
-            s.push({i,0});
+            int lBound=1,uBound=k;
+            stack<int> s;
+            s.push(i);
+            nodes[i]={1,0};
             while(!s.empty()){
-                int t=s.top().first; int par=s.top().second;s.pop();
-                visited[t]=true;
-                for(pair<int,int> g:graph[t]){
-                    pair<int,int> h=nodes[g.first];
-                    nodes[g.first]={max(h.first,g.second-nodes[t].second),min(g.second-nodes[t].first,h.second)};
-                    nodes[t]={max(nodes[t].first,g.second-nodes[g.first].second),min(nodes[t].second,g.second-nodes[g.first].first)};
-                    ans=min(ans,max(nodes[g.first].second-max(nodes[g.first].first,1)+1,0));
-                    ans=min(ans,max(nodes[t].second-max(nodes[t].first,1)+1,0));
-                    if(!visited[g.first])s.push({g.first,t});
-                    else if(g.first!=par) ans=min(ans,1);
+                int t=s.top(); s.pop();
+                if(nodes[t].first==1)lBound = max(lBound,1-nodes[t].second),uBound=min(uBound,k-nodes[t].second);
+                else lBound = max(lBound,nodes[t].second-k),uBound=min(uBound,1-nodes[t].second);
+                for(pair<int,int> u:graph[t]){
+                    if(nodes[u.first].first==0)nodes[u.first]={-nodes[t].first,-nodes[t].second+u.second};
+                    else{
+                        if(nodes[u.first].first=-nodes[t].first&&nodes[u.first].second==-nodes[t].second+u.second);
+                        //else finalAns=0;
+                    }
+                    if(!visited[u.first]){
+                        visited[u.first]=true;
+                        s.push(u.first);
+                    }
+                    printf("%d %d\n",nodes[u.first].first,nodes[u.second].second);
                 }
             }
-            finalAns*=ans;
+            if(lBound>uBound){
+                printf("0\n");
+                return 0;
+            }
+            finalAns*=uBound-lBound+1;
             finalAns%=MM;
         }
     }
