@@ -10,8 +10,8 @@ void update(int x,int y1,int val){
 }
 int query(int x,int y1){
     int n=0;
-    for(;x<5002; x+=x&-x){
-        for(int y=y1;y<5002;y+=y&-y)n+=bit[x][y];
+    for(;x;x-=x&-x){
+        for(int y=y1;y;y-=y&-y)n+=bit[x][y];
     }
     return n;
 }

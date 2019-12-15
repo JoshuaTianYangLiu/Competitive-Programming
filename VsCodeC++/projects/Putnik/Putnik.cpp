@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-int in[1501][1501];
-int dp[1501][1501];
+int in[1511][1511];
+int dp[1511][1511];
 int main() {
     int n;
     memset(dp,-1,sizeof(dp));
