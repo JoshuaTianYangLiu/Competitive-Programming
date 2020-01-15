@@ -9,10 +9,10 @@ vector<long long> itox,itoy;
 int compressedGrid[2020][2020];
 int main() {
 	int n,k;
-	scanf("%d %d",&n,&k);
-	for(int i=0,a,b,c,d,e; i<n; i++){
-		scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
-		coord.push_back({a,b,c,d,e});
+	scanf("%d",&n);
+	for(int i=0,a,b,c,d; i<n; i++){
+		scanf("%d %d %d %d",&a,&b,&c,&d);
+		coord.push_back({a,d,c,b,1});
 		xVal.insert(a);
 		xVal.insert(c);
 		yVal.insert(b);
@@ -54,7 +54,7 @@ int main() {
 	long long ans=0;
 	for(int i=0; i<xtoi.size()-1; i++){
 		for(int j=0; j<ytoi.size()-1; j++){
-			if(compressedGrid[i][j]>=k){
+			if(compressedGrid[i][j]>0){
 				ans+=(itox[i+1]-itox[i])*(itoy[j+1]-itoy[j]);
 				// printf("%d %d %d %d\n",itox[i+1],itox[i],itoy[j+1],itoy[j]);
 			}

@@ -3,12 +3,13 @@
 using namespace std;
 
 int main() {
-    freopen("D:\\Contest-Practice\\Contest-Practice\\VsCodeC++\\projects\\Temp\\input1.in","w",stdout);
-    printf("1000\n");
-    srand(time(0));
-    for(int i=0; i<1000; i++){
-        printf("%d\n",rand()%3001);
-    }
-    fclose(stdout);
+    int n;
+    scanf("%d",&n);
+    int h1,m1,h2,m2;
+    scanf("%d:%d December 22 2019",&h1,&m1);
+    scanf("%d:%d December 22 2019",&h2,&m2);
+    int totalTime= 60*h2+m2-60*h1-m1;
+    totalTime*=60;
+    printf("%.6f\n",(double)totalTime/n);
     return 0;
 }
