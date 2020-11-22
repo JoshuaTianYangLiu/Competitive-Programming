@@ -1,0 +1,405 @@
+Error detection in number theoretic algorithms
+by
+Troy Michael John Vasiga
+A thesis
+presented to the University of Waterloo
+in ful lment of the
+thesis requirement for the degree of
+Doctor of Philosophy
+in
+Computer Science
+Waterloo, Ontario, Canada, 2006
+c
+Troy Michael John Vasiga 2006
+ 
+I hereby declare that I am the sole author of this thesis.
+I authorize the University of Waterloo to lend this thesis to other institutions
+or individuals for the purpose of scholarly research.
+I further authorize the University of Waterloo to reproduce this thesis by pho-
+tocopying or by other means, in total or in part, at the request of other institutions
+or individuals for the purpose of scholarly research.
+ii
+ 
+The University of Waterloo requires the signatures of all persons using or pho-
+tocopying this thesis. Please sign below, and give address and date.
+iii
+ 
+Abstract
+CPU's are unreliable: at any point, a bit may be altered with some (small) proba-
+bility. This probability may seem neglible, but for large calculations (i.e. weeks of
+CPU time), the likelihood of an error being introduced becomings increasingly com-
+mon. This thesis examines several number theoretic algorithms in this light, and
+classi es them in terms of their soundness based on their execution on unreliable
+CPU's.
+iv
+ 
+Acknowledgements
+Everyone and anyone.
+v
+ 
+Trademarks
+vi
+ 
+Contents
+1 Introduction and Motivation 1
+1.1 Self-checking algorithms . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.2 A computational model . . . . . . . . . . . . . . . . . . . . . . . . . 5
+1.3 Error model for computation . . . . . . . . . . . . . . . . . . . . . . 6
+1.4 Other Motivational areas . . . . . . . . . . . . . . . . . . . . . . . . 8
+Bibliography 10
+vii
+ 
+List of Tables
+viii
+ 
+List of Figures
+ix
+ 
+Chapter 1
+Introduction and Motivation
+Computers currently are, and always have been, unreliable.
+Historically, when \computers" were those people who calculated extensive
+arithmetic formulae (sequences, factors of integers, logarithms of integers, etc.)
+mistakes (such as an incorrectly written digit, or transposed digits) would invari-
+ably occur.
+For example, the French mathematician Edouard Lucas devoted some of his
+computational energy towards determining perfect numbers. Recall that a perfect
+number is a positive integer n such that
+P
+xjn
+1 x<n
+x = n. Euler demonstrated that if
+2 p 1 is prime, then (2 p 1)2 p 1 is a perfect number. Furthermore, Euclid proved
+that all even perfect numbers must be of the form (2 p 1)2 p 1 . Lucas [40], relying
+on the above theorems and his extensive computations stated that \Nous pensons
+avoir d emontr e par des tr es longs calculs qu'il n'existe pas de nombres parfaits pour
+p = 67 et p = 89" 1 . Powers [50] later demonstrated that Lucas made an error in
+1 \We have demonstrated by lengthy calculations that there do not exist perfect numbers for
+the values p = 67 and p = 89."
+1
+ 
+CHAPTER 1. INTRODUCTION AND MOTIVATION 2
+his computations, by proving that 2 89 1 was prime, which implied that there is a
+perfect number of the form (2 p 1)2 p 1 where p = 89.
+A more well-known computational error was that of William Shanks (c. 1873) [25].
+Shanks claimed to have computed   to 707 decimal digits using applications of
+trigonometric expansions [52]. In 1944, D. F. Ferguson reviewed Shanks' computa-
+tions more thoroughly, and discovered that Shanks introduced an error at the 528 th
+decimal place, which revealed that the last 179 digits in Shanks' computation were
+incorrect. Ferguson and Wrench [20] formalized these results.
+In more modern times, silicon-based computation is adversely a ected by soft
+errors. A soft error can be loosely de ned as an error which is random, non-
+destructive event which alters one or more bits of information stored in a RAM
+cell or CPU register [61]. Soft errors di er considerably from hard errors which
+are more physical in their nature. A manufacturing defect in RAM which causes
+predictable, repeatable memory failure, such as a bit always being set to 0, is one
+type of hard error. Possibly the most \famous" (or at least, largest) hard error was
+the incorrect division wiring on Pentium chip: Blum and Wasserman [8] provide
+a mathematical reection on this hard error. Stallings [53] provides a thorough
+introduction to hard and soft errors.
+In early electronic circuits, soft errors could be introduced by faulty power
+systems or surges of electricity (e.g., lightning). The problem of maintaining an
+unwavering power supply was solved by computer manufacturers by shielding and
+grounding power supplies (see Ziegler's introduction [61]). Once the electrical con-
+trol problems were solved, research focused on soft errors caused by radioactive
+particles present in earthly materials, as well as the soft errors caused by cosmic
+radiation emitted from space [61]. One result which provides additional motivation
+for studying soft errors is that as computing devices are moved to higher altitudes
+ 
+CHAPTER 1. INTRODUCTION AND MOTIVATION 3
+from the surface of the earth, the soft error rate increases dramatically [61] (e.g.,
+a computer in a high altitude city such as Denver, Colorado would have a soft
+error rate roughly 100 times that of a computer situated at sea level). Moreover,
+computers in high altitude aircraft or satellite systems are at an even higher risk of
+soft errors.
+In this light, the work in this document illustrates how certain, well-known
+algorithms compare (in terms of accuracy and probability of success) when soft
+errors occur.
+1.1 Self-checking algorithms
+Some algorithms have more inherent ability to detect (and possibly recover) from
+errors that occurred during computation. For instance, an integer factorization
+algorithm will be able to verify that the product of the outputted factors is the
+original integer inputted.
+In other algorithms, however, it may be more di cult to perform a veri cation
+step to determine if the output is correct. As an example, primality testing typically
+outputs whether or not an integer is prime or composite, with no \proof" of the
+correctness of the output (other than the possibility of viewing the sequence of
+calculations that derived the result).
+There have been several arguments that certain algorithms have a \high likeli-
+hood" of success. Powers states that Lucas' method of determining primality (see
+Chapter ??) \is free from any uncertainty as to the accuracy of the conclusion that
+the number under consideration is prime...since an error in calculating any term of
+the series would have the e ect of preventing the appearance of the residue 0 [which
+ 
+CHAPTER 1. INTRODUCTION AND MOTIVATION 4
+indicates primality]" [50]. Uhler takes a less absolute opinion of the accuracy of
+Lucas' test under errors in computation. He states that the chance of stating that
+a composite number of the form 2 p 1 is prime is \utterly negligible, although not
+impossible" [57]. However, the opposite case of claiming a prime number of the
+form 2 p 1 is composite is \possible", even with the \utmost care and impeccable
+honesty" in the computations [57].
+It is worth noting, however, that the preceding arguments o er little in the
+way of formally proving any of the claims, and as such, the arguments are mere
+conjecture.
+Blum presents a more formal approach to determining the reliability of algo-
+rithms that have errors introduced: Blum de nes the concepts of program checking
+and self-checking programs. In short, a program checker for program P is a program
+C that takes an (input, output) pair, and either certi es that the output of P on
+the input was correct, or declares that P is \buggy"(i.e., incorrect). Self-checking
+(or self-testing) models are similar to the program checker model described above,
+but rely on the fact that program P is not \too faulty on average" [7] to create a
+more general program checker. A more thorough explanation to program checking
+is found in [6], and self-checking is described in full in [7].
+In summary, program checking has moved from informal arguments to more
+formal methods. The work in this thesis branches o  from the work of Blum on
+numerical problems (e.g., matrix multiplication) to the area of number theoretical
+problems.
+ 
+CHAPTER 1. INTRODUCTION AND MOTIVATION 5
+1.2 A computational model
+We now formalize our computational model.
+Our model is based on the Random Access Machine model which is outlined
+in Papadimitriou [46, Section 2.6], as well as many other computational analysis
+texts. Speci cally, we have the following descriptive points:
+  The main data structure is a collection of registers, where each register can
+store an arbitrarily large positive or negative integer. We label registers with
+x; y; ::: .
+  Algorithms are  nite sequence of instructions executed sequentially, where
+each instruction is either an assignment, comparison, iteration or conditional
+instruction.
+  We may assign a value to a register by way of the   operator. For example,
+the instruction x   y, semantically gives register x the value contained in
+register y, without modifying the contents of y (or any other register).
+  We may compare a register to another register or value by way of the =
+operator. For example, the instruction x = 3 would evaluate to true i  the
+value 3 is stored in register x.
+  We may iterate a sequence of instructions by way of the following construct:
+for R from b to v do
+X
+end for
+ 
+CHAPTER 1. INTRODUCTION AND MOTIVATION 6
+which will execute the instructions called X a total of b v + 1 times, where
+on the ith iteration, X is executed with R having value b + i 1.
+  We may also conditionally evaluate instructions using the following construct:
+if C1 then
+X1
+else if C2 then
+X2
+else if ...
+. . .
+else if CN then
+XN
+else
+Y
+end if
+which will execute instructions Xi i  conditions C1, ..., C(i-1) evaluate
+to false and condition Ci evaluates to true. The instructions labeled Y are
+executed if and only if all conditions Ci evaluate to false.
+  We will also use mathematical operations such as arithmetical operators
+(+; ;  ; =), exponentiation (x y ) and modular reduction (x (mod y)) when
+we are computing a value or condition.
+1.3 Error model for computation
+The thrust of this thesis is to quantify the e ect of errors on various algorithms.
+That is, we must formally specify a model to capture how, when and where errors
+ 
+CHAPTER 1. INTRODUCTION AND MOTIVATION 7
+may occur in order to determine what e ect their occurrence has on the correctness
+of the algorithms output.
+We begin by stating where errors could be introduced into the algorithms:
+  The input may be changed before any computation occurs.
+  The output of any non-trivial calculation may be incorrect. That is, multi-
+plication of two integers, neither of which is 0 or 1 is non-trivial. A trivial
+calculation would be division by two or a decrement of 1.
+  At any point in the algorithms execution, a register containing any value
+(either a computed value or a constant) may be altered.
+  The output of the algorithm may be changed after all computation occurs.
+In contrast, the following examples illustrate those operations which we will assume
+to be correct:
+  Computing subtraction by 1 (i.e., p 1) is error free.
+  Given the previous point, computing p 1
+2
+is error free.
+  Computing x (mod p) will output an element y such that x = kp+y for some
+integer k, where 0   y   p 1.
+Next, we outline our model of fault-detection. In our model, execution of an
+algorithm can yield three possible outcomes:
+1. correct and feasible{the algorithm computes the correct results (that is, the
+errors had no e ect),
+ 
+CHAPTER 1. INTRODUCTION AND MOTIVATION 8
+2. incorrect and feasible{the algorithm computes an incorrect result (based on
+the input), the computed output is in the set of all possible outputs, or
+3. incorrect and infeasible{the algorithm computes an incorrect result, and the
+output is not in the set of all possible outputs.
+It is also worth noting that for the algorithms that we will be examining, we have
+algorithms that map an input from a large domain to an output value in a small
+range. For example, quadratic residue computation takes as input a value from 0
+to p 1 (for some large prime p), and computes a value in the set f1; 0; 1g. Thus,
+since we have a large input space and a small output space, case (3) above is a
+possibility, and as such, we will need to worry about detecting such errors.
+1.4 Other Motivational areas
+In the  nal version of my thesis, I will be examining some of the following areas to
+further mathematical motivations:
+  Shannon's analysis of error correcting codes ties in to basic concepts of infor-
+mation theory
+  the \Byzantine Generals" problem yields interesting mathematical results. A
+related paper by Szegedy and Chen [55] considers a general case of computing
+a given boolean function with multiple faulty copies of input bits.
+  Concepts of self-correcting algorithms, spot-checkers (see [18])
+  \NASA alone expects to spend up to $10 million on the quest for 100% reliable
+software" [23]
+ 
+CHAPTER 1. INTRODUCTION AND MOTIVATION 9
+  Dijkstra was interested in this, mostly in terms of synchronizing distributed
+ nite-state machines.
+  Interesting combinatorial structures can arise. See Flajolet and Odlyzko [21].
+  IBM quote: [11]. \For every 256 Mbytes of memory, you'll get one soft error
+a month"
+  Soft-error rate in airplanes are 100 times the error rate at sea-level. (See [44].)
+Physical manifestations of error
+  A \solar maximum" occurs every 11 years, causing increased bursts of radia-
+tion, which can disturb radio and satellite communication. See [45].
+  High Dependability Computing Consortium is spending millions of dollars in
+the search for \100% reliable software." [23]
+  Quantum error correction (see quant-ph/0004072) q-bits are even more sen-
+sitive to errors (due to continuum) than classical bits (discrete). Substantial
+work in this area has been done by Gottesman( [26]).
+ 
+Bibliography
+[1] L. Alonso et. al. \Quicksort with unreliable comparisons: a probabilistic anal-
+ysis", Combinatorics, Probability and Computing 34 (2004), 419{449.
+[2] E. Bach and J. Shallit, Algorithmic Number Theory, Volume 1: E cient Al-
+gorithms, MIT Press, 1996.
+[3] E. L. Blanton, S.P. Hurd and J.S. McCranie, \On the digraph de ned by
+squaring mod m, when m has primitive roots", Congress. Num. 82 (1991),
+167{177.
+[4] E.L. Blanton, S. P. Hurd and J.S. McCranie, \On a digraph de ned by squaring
+modulo n", Fib. Quart. 30 (1992), 322{333.
+[5] L. Blum, M. Blum and M. Shub, \A simple unpredictable pseudo-random
+number generator", SIAM J. Comput. 15, (1986) 364{381.
+[6] M. Blum and S. Kannan, \Designing programs that check their work," J. ACM
+42, 269{291 (1995).
+[7] M. Blum, M. Luby and R. Rubinfeld, \Self-testing/correcting with applications
+to numerical problems," . J. Comp. Sys. Sci 47, 549{595 (1993).
+10
+ 
+BIBLIOGRAPHY 11
+[8] M. Blum and H. Wasserman, \Reections on the Pentium division bug", IEEE
+Trans. Comput. 45 385{393 (1996).
+[9] R.S. Borgstrom and S.R. Kosaraju, \Comparison-based search in the presense
+of errors", Proceedings of the twenty- fth annual ACM symposium on theory
+of computing (1993), 130{136.
+[10] J.J. Brennan and B. Geist, \Analysis of iterated modular exponentiation: The
+orbits of x   (mod N)", Designs, Codes and Cryptography 30 (1998), 229{245.
+[11] A. Cataldo, \IBM moves to protect DRAM from cosmic invaders", EE Times
+(1998). Available: http://www.eetimes.com/news/98/1012news/ibm.html.
+[12] G. Chass e. Applications d'un corps  ni dans lui-m^eme, Vol. 149. Universit e de
+Rennes I U.E.R. de Math ematiques et Informatique, Rennes, 1984. Disserta-
+tion, Universit e de Rennes I, Rennes, 1984.
+[13] G. Chass e. \Applications d'un corps  ni dans lui-m^eme", In Algebra Collo-
+quium (Rennes, 1985), Univ. Rennes I, Rennes (1985), 207{219.
+[14] G. Chass e. \Combinatorial cycles of a polynomial map over a commutative
+ eld", Discrete Math. 61 (1986), 21{26.
+[15] W.-S. Chou and I. Shparlinski, \On the cycle structure of repeated exponen-
+tiation modulo a prime", J. Number Theory 107 (2004), 345{356.
+[16] A. Czumaj and C. Sohler, \Soft kinetic data structures", Symposium on Dis-
+crete Algorithms (2001), 865{872.
+[17] L. Devroye, \A note on the height of binary search trees", Journal of the ACM
+33 (1986), 489{498.
+ 
+BIBLIOGRAPHY 12
+[18] F. Ergun et. al., \Spot-checkers", J. Comput. System Sci. 60 (2000) , 717{751.
+[19] U. Feige, D. Peleg, P. Raghavan and E. Upfal, \Computing with unreliable
+information", Proceedings of the twenty-second annual ACM symposium on
+theory of computing (1990), 128{137.
+[20] D. F. Ferguson and John W. Wrench, Jr. Mathematical Tables and Other Aids
+to Computation, Vol. 3, No. 21. (Jan., 1948), pp. 18{19.
+[21] P. Flajolet and A. Odlyzko, \Random mapping statistics", in J.-J. Quisquater
+and J. Vandewalle, eds. Proceedings of Advances in Cryptography { Eurocrypt
+'89, Lecture Notes in Computer Science #434, Springer-Verlag (1989), 329{
+354.
+[22] A. Flores. \Geometry of numeric iterations", PRIMUS 4 (1994), 29{38.
+[23] R. Fox, \Crash-free consortium", Comm. of ACM, 44 (2001), 9.
+[24] C. L. Gilbert et. al., \Function digraphs of quadratic maps modulo p", Fib.
+Quart. 39 (2001), 32{49.
+[25] C. C. Gillispie (ed.), Dictionary of Scienti c Biography, (vol. 12), Scribners
+Sons, New York, 1975.
+[26] D. Gottesman, \An introduction to quantum error correction", in Quantum
+computation: A grand mathematical challenge for the twenty- rst century
+and the millennium, ed. S. J. Lomonaco, Jr, American Mathematical Soci-
+ety (2002).
+[27] R. Grubel and U. Rosler, \Asymptotic distribution theory for Hoare's selection
+algorithm", Adv. Appl. Prob. 28 (1996), 252{269.
+ 
+BIBLIOGRAPHY 13
+[28] R. K. Guy, Unsolved problems in number theory, Springer-Verlag, 1981.
+[29] B. Harris, \Probability distributions related to random mappings", Annals of
+Math. Stat. 31 (1960), 1045{1062.
+[30] R. A. Holmgren, A First Course in Discrete Dynamical Systems (Second Edi-
+tion), Springer-Verlag, 1996.
+[31] L. K. Hua, Introduction to number theory, Springer-Verlag, Berlin, 1982.
+[32] W. Keller, \Factors of Fermat numbers and large primes of the form k   2 n +1",
+Math. Comput. 41 (1983), 661{673.
+[33] W. Keller, \Fermat factoring status," World Wide Web,
+http://www.prothsearch.net/fermat.html#Count, January 2002.
+[34] A. Khrennikov and M. Nilsson, \On the number of cycles of p-adic dynamical
+systems, J. Number Theory 90 (2001), 255{264.
+[35] M. Kraitchik, Th eorie des Nombres, Tome II, Gauthier-Villars, Paris, 1926.
+[36] S. Kravitz, \The Lucas-Lehmer test for Mersenne numbers", Fib. Quart. 8
+(1970), 1{3.
+[37] D. H. Lehmer, \Tests for primality by the converse of Fermat's theorem", Bull.
+Amer. Math. Soc. 33 (1927), 327{340.
+[38] D. H. Lehmer, \An extended theory of Lucas' functions", Ann. Math. 31
+(1930), 419{448.
+[39] R. Lidl and H. Niederreiter, Introduction to Finite Fields and Their Applica-
+tions, Cambridge University Press, 1994.
+ 
+BIBLIOGRAPHY 14
+[40] E. Lucas, Th eorie des Nombres, 1876.
+[41] E. Lucas, \Th eorie des fonctions num eriques simplement p eriodiques", Amer.
+J. Math. 1 (1878), 289{321.
+[42] H. P. Luhn, \Computer for Verifying Numbers", US Patent 2,950,048 (1960).
+[43] C. Lucheta, E. Miller, C. Reiter, \Digraphs from powers modulo p", Fib. Quart.
+34 (1996), 226{239.
+[44] Mitsubishi Electronics, \Mitsubishi Electric develops high-frequency syn-
+chronous SRAM with dramatically reduced soft error rate", (1999). Available:
+http://www.businesswire.com/webbox/bw.021599/1101534.htm.
+[45] NASA/Marshall Space Flight Center, \Solar Physics" Available:
+http://science.nasa.gov/ssl/PAD/SOLAR/.
+[46] C. Papadimitriou, Computational Complexity, Addison-Wesley, New York,
+1994.
+[47] T. Pepin, \Sur la formule 2 2
+n
++ 1," C. R. Acad. Sci. Paris 85 (1877), 329{331.
+[48] T. Pepin, \Sur la formule 2 n 1,", C. R. Acad. Sci. Paris 86 (1878), 307{310.
+[49] J. M. Pollard, \A Monte Carlo method for factorization," BIT 15 (1975),
+331{334.
+[50] R.E. Powers, \The tenth perfect number," Amer. Math. Monthly XVIII, 195{
+7 (1911).
+[51] T. D. Rogers, \The graph of the square mapping on the prime  elds", Discrete
+Math. 148 (1996), 317{324.
+ 
+BIBLIOGRAPHY 15
+[52] W. Shanks, \Contributions to Mathematics Comprising Chiey of the Recti-
+ cation of the Circle to 607 Places of Decimals," G. Bell: London (1853).
+[53] W. Stallings, Computer organization and architecture: principles of structure
+and function, second edition, Macmillan, New York, 1990.
+[54] D. Stanton and D. White, Constructive Combinatorics, Springer-Verlag, New
+York, 1986.
+[55] M. Szegedy and X. Chen, \Computing boolean functions with multiple faulty
+copies of input bits", in S. Rajsbaum, ed., Proceedings of LATIN 2002, Lecture
+Notes in Computer Science #2286, Springer-Verlag (2002), 539{553.
+[56] E. Teske and H.C. Williams, \A note on Shanks' chains of primes" in W.
+Bosma, ed., Proceedings of ANTS IV, Lecture Notes in Computer Science
+#1838, Springer-Verlag (2000), 563{580.
+[57] H. S. Uhler, \A brief history of the investigations on the Mersenne numbers
+and the latest immense primes," Scripta Mathematica 181, 122{131 (1952).
+[58] T. Vasiga and J. Shallit, \On the iteration of certain quadratic maps over
+GF(p)", Discrete Math., 277, 219{240 (2004).
+[59] H. C. Williams,  
+Edouard Lucas and Primality Testing, Wiley, 1998.
+[60] B. Wilson, \Power digraphs modulo n", Fib. Quart. 36 (1998), 229{239.
+[61] J.F. Ziegler et al., \IBM experiments in soft fails in computer electronics (1978-
+1994)", IBM J. Res. Develop. 40, 1{17 (1996).
+ 
